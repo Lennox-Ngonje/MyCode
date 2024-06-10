@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg1{
+    /* background: linear-gradient(to right, #000000, #383737 50%, #f70000 100%) ; */
+    background: linear-gradient(#ff0000, #000000);
+}
+
+/* .text1:hover{
+    background-color: rgb(0, 0, 0);
+} */
+
+
+.rectangle{
+  height: 3px;
+  width: 100vw;
+  background-color: white;
+}
+
+.img3{
+  width: 550px;
+}
+
+@media (max-width: 656px) {
+  .img1{
+    width: 350px;
+  }
+  
+  .img2{
+    width: 350px;
+  }
+
+    .img3 {
+      width: 80vw;
+
+    }
+
+  .rectangle{
+
+  }
+}

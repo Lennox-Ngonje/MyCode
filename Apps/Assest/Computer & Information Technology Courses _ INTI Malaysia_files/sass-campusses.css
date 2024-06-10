@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*****************************
+ * Variables
+ *****************************
+ */
+/*****************************
+ * Course Colors
+ *****************************
+ */
+/*****************************
+ * Campus styling
+ *****************************
+ */
+.campus {
+  background-color: #e6e6e6; }
+  .campus.vc_section {
+    margin: 0;
+    margin-top: 20px; }
+  .campus .campus-image {
+    padding: 0px;
+    margin: 0px -15px; }
+  .campus .campus-description {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .campus .campus-links {
+    border-left: solid 1px #ffffff; }
+    .campus .campus-links .campus-location:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "";
+      margin-left: 5px;
+      color: #555555;
+      font-size: 15px; }
+    .campus .campus-links .phone-number:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "" 12;
+      margin-left: 5px;
+      color: #555555;
+      font-size: 15px; }
+
+.campus-page .programme-filter-wrapper {
+  top: 58px;
+  z-index: 90; }
+
+#campus-in-page-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 85px;
+  text-align: center;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  z-index: 91; }
+
+#campus-in-page-nav br {
+  display: none; }
+
+#campus-in-page-nav .wpb_content_element, #campus-in-page-nav p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
+#campus-in-page-nav a {
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  padding: 8px 15px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 4px; }
+
+#campus-in-page-nav a:hover {
+  color: #e20c18; }
+
+#campus-in-page-nav .active a {
+  color: #F38A8A;
+  border-bottom: 3px solid #F38A8A; }
+
+.campus-page.page-header .vc_btn3-container.vc_btn3-center {
+  display: none !important; }
+
+#campus-in-page-nav .scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+#campus-in-page-nav .top-icon {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+@media (max-width: 786px) {
+  #campus-in-page-nav a {
+    display: inline-block;
+    font-size: 15px;
+    color: #000;
+    border: solid 1px #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    margin-right: 4px; } }
+
+/*# sourceMappingURL=sass-campusses.css.map */

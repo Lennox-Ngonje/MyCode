@@ -1,0 +1,77 @@
+//	$Id$
+
+function rem_val_error(elem) {
+	jQuery(elem).closest("li.gfield").find(".gfield_error").remove();
+}
+
+jQuery(function($) {
+
+	$.fn.dynamite = function(_check, _classSuccess) {
+		var _typeof = typeof(_check),
+			_tagName = this.prop("tagName"),
+			_type = this.attr("type");;
+
+		if(_tagName=="SELECT") {
+			this.change(function() {
+				var $elem = $("#"+this.id+"_chosen");
+				if(!$elem.length) $elem = $(this);
+				$elem.toggleClass(_classSuccess, this.selectedIndex>0);
+			});
+		} else if(_tagName=="INPUT" && (_type=="text" || _type=="email" || _type=="password" || _type=="tel")) {
+			if(_typeof=='number') {
+				this.keyup(function() {
+					var flag = this.value.length>=_check;
+					$(this).toggleClass(_classSuccess, flag);
+					if(flag) rem_val_error(this);
+				});
+			} else if(_typeof=='object' && _check instanceof RegExp) {
+				this.keyup(function() {
+					var flag = this.value.match(_check)!==null;
+					$(this).toggleClass(_classSuccess, flag);
+					if(flag) rem_val_error(this);
+				});
+			} else {
+				console.log("dynamite: invalid parameter: "+_typeof);
+			}
+		} else if(_tagName=="INPUT" && (_type=="radio" || _type=="checkbox")) {
+			this.click(function() {
+				$(".g"+this.id).toggleClass(_classSuccess, this.checked)
+				if(_type=="radio" && this.checked) {
+					$(".g"+this.id).siblings().toggleClass(_classSuccess, false);
+					showValidateError(this, false);
+				}
+			});
+		}
+		return this;
+	};
+
+	$.fn.filter_chars = function(_filter) {
+		this.keypress(function(e){
+			var chr = String.fromCharCode(e.which);
+			if(e.which>31 && _filter.indexOf(chr)<0) {
+				e.preventDefault();
+			} else if(chr=="+" && this.value.length>0) {
+				e.preventDefault();
+			}
+		});
+		return this;
+	};
+
+	//	Simple JQ plugin to scroll field to view, assuming it might be to high in the page
+	$.fn.scrollToView = function(offset) {
+		var top = this.offset().top, scroll = $(window).scrollTop();
+		offset = offset || 0;
+		if(top>offset) top -= offset;
+		if(top<scroll) {
+//console.log("Scrolling from "+scroll+" to "+top);
+			$("html,body").animate({scrollTop: top});
+		}
+		return this;
+	};
+//console.log("scrollToView initialized.");
+	
+});
+
+//	For select, use id+"_chosen"
+//		if found, toggle class on it,
+//		else toggle class on select itself.

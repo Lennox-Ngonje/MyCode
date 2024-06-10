@@ -1,0 +1,104 @@
+//	set-websource.js
+// latest version v2
+var websource = null,
+	websourcegroup = null;
+	is_organic = "-,(direct),118,INTI website,accaglobal,ask,babylon,en,kolejswasta,m,malaysiauniversity,malaysia-education,mqa,newinti,none,organic,pjcad,t,www1,www2".split(","),
+	is_not_organic = "adnear,adzcentral,afterschool,alpha_andrewxander,alpha_bwincessnana,alpha_dankhoo,alpha_minghan,alpha_yangbaobei,astro,bfm,bing,bmpage,businessinsider,cari,cbsi,cda,churpchurp,cilisos,cinemaonline,creme,easyuni,exacttarget,fox,gdn,gmail,gostudymalaysia,gsconline,hindustantimes,htcampus,ign,inmobi,innity,instagram,jobstreet,johornow,joox,linkedin,litefm,lowyat,malaysiakini,mobme,msn,mystarjob,nomnommedia,nuffnang,ohi,outlook,rojaklah,scholars,skype,spotify,star,stdirectory,studymalaysia,tribalfusion,twitter,viralcham,vservmobi,whatsapp,xasis,xaxis,yahoo,yahoobrandbar,youthincorporatedmagazine,yronstandardad,yronstreamad,fd,sinchew,mbo,brandfilm".split(","),
+	education_portals = "masterstudies,easyuni,afterschool,quinstreet,hotcourses,stdirectory".split(","),
+	mobile_campaign = "inmobi,mobme,vservmobi,mobileapp,whatsapp".split(",");
+
+function get_websource($) {
+	var args = {};
+	//	get URI arguments
+	window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) 
+	{
+		args[key] = value.toLowerCase();
+	});
+
+	websource = "organic";
+	//	Set websource predefined values...
+	if("gclid" in args || "c_aid" in args) {
+		websource = "google";
+	} else if("utm_source" in args) {
+		websource = args.utm_source;
+	} else if("sessionStorage" in window && "websource" in sessionStorage) {
+		websource = sessionStorage.websource;
+	} else {
+		websource = "organic";
+	}
+
+	if($.inArray(websource, is_organic)>=0) websource = "organic";
+	else if(websource=="google" || websource=="search" || websource=="googleads"|| websource=="google_search") websource = "google";
+	else if(websource=="hotcourse" || websource=="hotcoursesinternational") websource = "hotcourses";
+	else if(websource.indexOf('_')<0 &&
+			websource.indexOf('rtb')<0 &&
+			websource.indexOf('facebook')<0 &&
+			websource.indexOf('youtube')<0 &&
+			websource.indexOf('herobanner')<0 &&
+			websource.indexOf('freshchat')<0 &&
+			websource.indexOf('malaymail')<0 &&	
+			websource.indexOf('brandfilm')<0 &&			
+			$.inArray(websource, is_not_organic)<0 ) {
+
+		websource = "organic";
+	}
+
+	return websource;
+}
+
+function get_websourcegroup($)
+{
+	//	Get websource group from global variable websource.
+	if(websource=="organic" || websource.indexOf("herobanner")>=0)
+		websourcegroup = "organic";
+	else if($.inArray(websource, education_portals)>=0) 
+		websourcegroup = "Education Portals";
+	else if(websource.indexOf("google")>=0)
+		websourcegroup = "Google";
+	else if(websource.indexOf("gdn")>=0)
+		websourcegroup = "Google";
+	else if((websource.indexOf("spotify")>=0)||(websource.indexOf("mbo")>=0)||(websource.indexOf("brandfilm")>=0))
+		websourcegroup = "Ad Networks";
+	else if(websource.indexOf("facebook")>=0)
+		websourcegroup = "Facebook";
+	else if(websource.indexOf("twitter")>=0 || websource.indexOf("Twitter")>=0 || websource.indexOf("youtube")>=0 || websource.indexOf("Youtube")>=0)
+		websourcegroup = "Social Media";
+	else if(websource=="linkedin")
+		websourcegroup = "Linkedin";
+	else if(websource.indexOf("malaymail")>=0)
+		websourcegroup = "Ad Networks";		
+	else if($.inArray(websource, mobile_campaign)>=0)
+		websourcegroup = "Mobile Campaign";
+	else if(websource.indexOf("_")>=0 || websource=="exacttarget")
+		websourcegroup = "EDM Campaign";
+	else if(websource.indexOf("freshchat")>=0)
+		websourcegroup = "Organic";
+	else
+		websourcegroup = "Organic";
+
+	return websourcegroup;
+}
+
+jQuery(function($){
+	var $link = $("#chat-modal"), href;
+
+	websource = get_websource($);
+	websourcegroup = get_websourcegroup($);
+	if("sessionStorage" in window) {
+		sessionStorage.websource = websource;
+		sessionStorage.websourcegroup = websourcegroup;		
+	}
+
+console.log("ws="+websource+", wsg="+websourcegroup);
+	href = $link.attr("href");
+	if(href!==undefined) {
+		href = href.split("?")[0];
+		$link.attr("href", href+"?wsg="+websourcegroup+"&ws="+websource);
+	}
+	$("#input_1_34, #input_2_34, #input_3_34, #popupwebsourcegroup").each(function(){
+		$(this).val(websourcegroup);
+	});
+	$("#input_1_35, #input_2_35, #input_3_35, #popupwebsource").each(function(){
+		$(this).val(websource);
+	});
+});

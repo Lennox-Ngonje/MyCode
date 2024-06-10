@@ -1,0 +1,1340 @@
+@charset "UTF-8";
+/* Last Updates - Paul C 2018-08-06 */
+/*****************************
+ * Variables
+ *****************************
+ */
+/*****************************
+ * Course Colors
+ *****************************
+ */
+/*****************************
+ * Mixins
+ *****************************
+ */
+/****************************************************************************************
+ * Product Loop (Course)
+ ****************************************************************************************
+ */
+.products .product a h2 {
+  font-family: "Europa", sans-serif !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  width: 100%;
+  text-align: left;
+  padding-left: 8px !important;
+  padding-right: 10px !important;
+  padding-top: 14px !important;
+  padding-bottom: 10px !important; }
+
+.products .product a p {
+  font-size: 80%; }
+
+.inti_custom_product_loop_title {
+  position: relative;
+  line-height: 1.1; }
+  .inti_custom_product_loop_title .product_title_small {
+    text-transform: uppercase;
+    font-size: 70%;
+    display: block;
+    line-height: 1.2; }
+
+.products .product {
+  background-color: #ffffff; }
+
+.products .product .inti_custom_product_loop_title:after {
+  background-color: #d4d4d4;
+  content: "";
+  display: block;
+  height: 14px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 5px;
+  height: 100%;
+  z-index: 4; }
+
+.products .product.product_cat-american-university-program .inti_custom_product_loop_title:after,
+.products .product.product_cat-american-university-program.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-american-university-program .programme-btn,
+.single.single-product.product_cat-american-university-program #top-banner:after,
+.single.single-product.product_cat-american-university-program #top-banner h1:after {
+  background-color: #312783; }
+
+.products .product.product_cat-art-design .inti_custom_product_loop_title:after,
+.products .product.product_cat-art-design.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-art-design .programme-btn,
+.single.single-product.product_cat-art-design #top-banner:after,
+.single.single-product.product_cat-art-design #top-banner h1:after {
+  background-color: #951b81; }
+
+.products .product.product_cat-business .inti_custom_product_loop_title:after,
+.products .product.product_cat-business.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-business .programme-btn,
+.single.single-product.product_cat-business #top-banner:after,
+.single.single-product.product_cat-business #top-banner h1:after {
+  background-color: #e30613; }
+
+.products .product.product_cat-biotechnology-life-sciences .inti_custom_product_loop_title:after,
+.products .product.product_cat-biotechnology-life-sciences.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-biotechnology-life-sciences .programme-btn,
+.single.single-product.product_cat-biotechnology-life-sciences #top-banner:after,
+.single.single-product.product_cat-biotechnology-life-sciences #top-banner h1:after {
+  background-color: #00a97a; }
+
+.products .product.product_cat-computing-it .inti_custom_product_loop_title:after,
+.products .product.product_cat-computing-it.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-computing-it .programme-btn,
+.single.single-product.product_cat-computing-it #top-banner:after,
+.single.single-product.product_cat-computing-it #top-banner h1:after {
+  background-color: #eea100; }
+
+.products .product.product_cat-engineering .inti_custom_product_loop_title:after,
+.products .product.product_cat-engineering.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-engineering .programme-btn,
+.single.single-product.product_cat-engineering #top-banner:after,
+.single.single-product.product_cat-engineering #top-banner h1:after {
+  background-color: #7e65aa; }
+
+.products .product.product_cat-hospitality .inti_custom_product_loop_title:after,
+.products .product.product_cat-hospitality.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-hospitality .programme-btn,
+.single.single-product.product_cat-hospitality #top-banner:after,
+.single.single-product.product_cat-hospitality #top-banner h1:after {
+  background-color: #e74011; }
+
+.products .product.product_cat-law .inti_custom_product_loop_title:after,
+.products .product.product_cat-law.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-law .programme-btn,
+.single.single-product.product_cat-law #top-banner:after,
+.single.single-product.product_cat-law #top-banner h1:after {
+  background-color: #82275c; }
+
+.products .product.product_cat-mass-communication .inti_custom_product_loop_title:after,
+.products .product.product_cat-mass-communication.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-mass-communication .programme-btn,
+.single.single-product.product_cat-mass-communication #top-banner:after,
+.single.single-product.product_cat-mass-communication #top-banner h1:after {
+  background-color: #7c234b; }
+
+.products .product.product_cat-pre-university-programmes .inti_custom_product_loop_title:after,
+.products .product.product_cat-pre-university-programmes.product-category .woocommerce-loop-category__title,
+.single.single-product.product_cat-pre-university-programmes .programme-btn,
+.single.single-product.product_cat-pre-university-programmes #top-banner:after,
+.single.single-product.product_cat-pre-university-programmes #top-banner h1:after {
+  background-color: #3aaa35; }
+
+.product-labels-loop {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 34px;
+  left: 0px;
+  right: 0px; }
+
+.product-labels-loop-inner {
+  position: relative; }
+  .product-labels-loop-inner:before {
+    display: block;
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: -40px;
+    height: 30px;
+    background: url(../images/fade.png) repeat-x; }
+
+.custom-product-label-loop {
+  font-weight: normal;
+  background-color: #fff;
+  padding: 0px;
+  padding-right: 10px;
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.product-compare-loop {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
+
+.products .compare.button,
+.products .loop_new_link.button {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  height: 34px;
+  padding: 0px;
+  line-height: 34px;
+  font-size: 12px;
+  bottom: 0px;
+  background-color: #d4d4d4;
+  color: #888888;
+  font-weight: normal; }
+
+.products .compare.button {
+  left: 0px;
+  border-right: solid 1px #ffffff;
+  font-weight: normal; }
+  .products .compare.button:hover {
+    background-color: #888888;
+    color: #d4d4d4; }
+  .products .compare.button:before {
+    content: "";
+    font-family: "icomoon" !important;
+    padding-right: 5px;
+    font-size: 125%;
+    display: inline-block; }
+
+.products .product .loop_new_link.button {
+  right: 0px; }
+  .products .product .loop_new_link.button:hover {
+    background-color: #888888;
+    color: #d4d4d4; }
+
+.yith-woocompare-counter {
+  display: inline;
+  float: right;
+  padding: 6px; }
+
+.inti_custom_product_loop_short_description {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+  .inti_custom_product_loop_short_description p {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important; }
+
+/* Product Loop - Base */
+.woocommerce ul.products li.product {
+  width: 22%;
+  height: 250px;
+  margin: 1% 1.5% !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+  -moz-box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1); }
+
+.wpb_text_column .wpb_content_element {
+  background-color: #eeeeee !important; }
+
+.woocommerce .products ul, .woocommerce ul.products {
+  background-color: #eeeeee !important;
+  margin-bottom: 0px;
+  padding: 30px; }
+
+.inti_custom_product_loop_title {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center; }
+  .inti_custom_product_loop_title h2 {
+    text-align: center;
+    margin-bottom: 25px; }
+
+.products li.product:hover, .woocommerce ul.products li.product:hover {
+  -webkit-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2); }
+
+.products li.product:hover a {
+  color: #3a3a3a; }
+
+/****************************************************************************************
+ * Products Single Page (Course)
+ ****************************************************************************************
+ */
+.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce div.product form.cart {
+  display: none; }
+
+.single.single-product #top-banner .slide-style1.default {
+  background-color: transparent; }
+.single.single-product #page {
+  z-index: 2;
+  position: relative; }
+
+.single.single-product #top-banner {
+  background-color: #888888;
+  background-size: cover;
+  position: relative;
+  background-position: center -100px;
+  background-attachment: local;
+  margin-top: 0px;
+  transition: all 0.5s ease;
+  overflow: hidden; }
+  .single.single-product #top-banner:after {
+    background-color: #d4d4d4;
+    content: "";
+    display: block;
+    height: 14px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    z-index: 4; }
+
+@keyframes zoomHeader {
+  0% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+.single.single-product #top-banner {
+  animation: 1s ease-out 0s 1 zoomHeader; }
+
+.programme-bg-overlay {
+  background-image: url("../images/header_image_fade.png");
+  background-size: cover;
+  background-position: bottom center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; }
+
+/*-/ end colors for heading  ----- */
+.single-product .inti_custom_product_single .compare.button {
+  float: right;
+  margin-top: 11px;
+  margin-right: 10px;
+  padding: 9px 20px;
+  border-radius: 2px; }
+  .single-product .inti_custom_product_single .compare.button:before {
+    content: "";
+    font-family: "icomoon" !important;
+    padding-right: 5px; }
+
+.programme-btn {
+  background-color: transparent;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.brochure_url {
+  padding-top: 20px;
+  padding-right: 20px; }
+  .brochure_url.on-mobile {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding-top: 30px; }
+
+.products mark, products .mark {
+  padding: 0.2em;
+  color: #fff; }
+
+.single.single-product .programme-btn {
+  margin-top: 11px;
+  padding: 10px 20px;
+  font-weight: normal;
+  color: #ffffff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: none;
+  background-color: #888888; }
+  .single.single-product .programme-btn i {
+    margin-right: 5px; }
+
+.single.single-product .programme-btn:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #888888; }
+
+.single.single-product #single-programme-header {
+  text-align: left;
+  padding-left: 45px;
+  padding-right: 45px;
+  min-height: 65vh !important;
+  position: relative; }
+  .single.single-product #single-programme-header div, .single.single-product #single-programme-header h2, .single.single-product #single-programme-header h1, .single.single-product #single-programme-header p {
+    margin-left: 0px !important; }
+  .single.single-product #single-programme-header #single-programme-header-inner {
+    position: absolute;
+    bottom: 0px;
+    min-height: 250px;
+    max-width: 700px; }
+
+.single.single-product h1 {
+  line-height: 1; }
+  .single.single-product h1 .product_title_small {
+    font-size: 0.4em;
+    font-family: "Europa", sans-serif;
+    display: block;
+    margin-top: 0.4em;
+    line-height: 1; }
+  .single.single-product h1 .product_title_partner_small {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    display: block;
+    line-height: 1; }
+
+.single-product-excerpt {
+  font-size: 18px; }
+
+.inti_custom_product_single {
+  margin-bottom: 30px;
+  margin-top: 10px; }
+
+.product-labels {
+  margin: 10px 0px;
+  float: none;
+  clear: both;
+  font-size: 14px;
+  padding-left: 30px; }
+
+.custom-product-label {
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 1px;
+  margin-bottom: 2px;
+  font-weight: normal;
+  display: inline-block; }
+
+.inti_custom_product-long_desc, .unique-selling, .why-inti-bullets {
+  clear: both;
+  border-top: solid 1px #e6e6e6;
+  font-family: "Europa", sans-serif;
+  font-weight: 300; }
+  .inti_custom_product-long_desc ul, .unique-selling ul, .why-inti-bullets ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 50px 0px 50px 0px; }
+    .inti_custom_product-long_desc ul li, .unique-selling ul li, .why-inti-bullets ul li {
+      position: relative;
+      margin-bottom: 12px;
+      width: calc(47% - 30px);
+      margin-right: 2.9%;
+      padding-left: 39px;
+      display: inline-flex;
+      font-size: 18px; }
+
+.inti_custom_product-long_desc ul li:before,
+.unique-selling ul li:before,
+.why-inti-bullets ul li:before {
+  font-family: icomoon;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  color: #69bf7f;
+  font-size: 90%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px; }
+
+.inti_custom_product-long_desc ul li:after,
+.unique-selling ul li:after,
+.why-inti-bullets ul li:after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #69bf7f;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+
+.inti_custom_product-long_desc .small {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 14px !important; }
+
+.product .summary.entry-summary {
+  padding-left: 30px;
+  padding-right: 20px; }
+
+#programme-detail {
+  padding-bottom: 20px;
+  padding-right: 20px;
+  clear: left;
+  border-top: solid 1px #e6e6e6;
+  margin-right: 5px; }
+
+.woocommerce-page div.product div.summary {
+  width: 100%;
+  margin-bottom: 1em; }
+
+.inti_long {
+  clear: both;
+  font-size: 14px; }
+
+.inti_long h3 {
+  font-family: "Europa", sans-serif !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: black; }
+
+.inti_long h3:after {
+  content: "";
+  display: inline-block;
+  font: normal 14px/1 icomoon;
+  margin-left: 20px;
+  transform: rotate(0deg); }
+
+.inti_long button.collapsed.active h3:after {
+  transform: rotate(180deg); }
+
+.inti_long button {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #f0f0f0;
+  border-left: solid 10px #00ffb0;
+  padding: 10px 80px 0px 15px !important;
+  background-repeat: no-repeat;
+  background-position: 96% 32px;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  position: relative; }
+  .inti_long button:before {
+    background: #e6e6e6;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    top: 24px;
+    left: -30px;
+    width: 30px; }
+
+.inti_long div.tab-content {
+  background-color: #f0f0f0;
+  padding: 0px 15px 0px 15px;
+  border-left: solid 10px #ccc;
+  max-width: 100%;
+  overflow-x: scroll; }
+  .inti_long div.tab-content a {
+    text-decoration: underline; }
+
+.inti_long div.tab-content::-webkit-scrollbar {
+  display: none; }
+
+.product_cat-american-university-program .inti_long button:before {
+  background: #312783; }
+.product_cat-american-university-program .inti_long button.collapsed.active {
+  border-left: solid 10px #312783; }
+.product_cat-american-university-program .inti_long div.tab-content {
+  border-left: solid 10px #312783; }
+
+.product_cat-art-design .inti_long button:before {
+  background: #951b81; }
+.product_cat-art-design .inti_long button.collapsed.active {
+  border-left: solid 10px #951b81; }
+.product_cat-art-design .inti_long div.tab-content {
+  border-left: solid 10px #951b81; }
+
+.product_cat-business .inti_long button:before {
+  background: #e30613; }
+.product_cat-business .inti_long button.collapsed.active {
+  border-left: solid 10px #e30613; }
+.product_cat-business .inti_long div.tab-content {
+  border-left: solid 10px #e30613; }
+
+.product_cat-biotechnology-life-sciences .inti_long button:before {
+  background: #00a97a; }
+.product_cat-biotechnology-life-sciences .inti_long button.collapsed.active {
+  border-left: solid 10px #00a97a; }
+.product_cat-biotechnology-life-sciences .inti_long div.tab-content {
+  border-left: solid 10px #00a97a; }
+
+.product_cat-computing-it .inti_long button:before {
+  background: #eea100; }
+.product_cat-computing-it .inti_long button.collapsed.active {
+  border-left: solid 10px #eea100; }
+.product_cat-computing-it .inti_long div.tab-content {
+  border-left: solid 10px #eea100; }
+
+.product_cat-engineering .inti_long button:before {
+  background: #7e65aa; }
+.product_cat-engineering .inti_long button.collapsed.active {
+  border-left: solid 10px #7e65aa; }
+.product_cat-engineering .inti_long div.tab-content {
+  border-left: solid 10px #7e65aa; }
+
+.product_cat-hospitality .inti_long button:before {
+  background: #e74011; }
+.product_cat-hospitality .inti_long button.collapsed.active {
+  border-left: solid 10px #e74011; }
+.product_cat-hospitality .inti_long div.tab-content {
+  border-left: solid 10px #e74011; }
+
+.product_cat-law .inti_long button:before {
+  background: #82275c; }
+.product_cat-law .inti_long button.collapsed.active {
+  border-left: solid 10px #82275c; }
+.product_cat-law .inti_long div.tab-content {
+  border-left: solid 10px #82275c; }
+
+.product_cat-mass-communication .inti_long button:before {
+  background: #7c234b; }
+.product_cat-mass-communication .inti_long button.collapsed.active {
+  border-left: solid 10px #7c234b; }
+.product_cat-mass-communication .inti_long div.tab-content {
+  border-left: solid 10px #7c234b; }
+
+.product_cat-pre-university-programmes .inti_long button:before {
+  background: #3aaa35; }
+.product_cat-pre-university-programmes .inti_long button.collapsed.active {
+  border-left: solid 10px #3aaa35; }
+.product_cat-pre-university-programmes .inti_long div.tab-content {
+  border-left: solid 10px #3aaa35; }
+
+/* Animated Accordion */
+.inti_long button.collapsed {
+  background-color: #fff;
+  border-left: solid 10px #fff;
+  transition: max-height 0.2s ease-out; }
+
+.inti_long button.collapsed.active {
+  border-color: #f0f0f0;
+  transition: max-height 0.2s ease-out;
+  background-color: #f0f0f0; }
+
+.inti_long button.collapsed.active:before {
+  display: none; }
+
+.inti_long .collapse {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+
+.inti_long .inti-custom-tab button p,
+.inti_long .inti-custon-tab button p {
+  display: block;
+  color: #3a3a3a;
+  margin-top: 0px; }
+
+/* RESET ALL THE TABLE THAT WAS COPIED OVER */
+.inti_long td, .inti_long th, .inti_long table {
+  border: none;
+  background: transparent; }
+
+.inti_long .spacer_10, .inti_long .spacer_20, .topLeft, .topRight, .bottomLeft, .bottomRight, .font16 {
+  display: none; }
+
+.inti_long hr {
+  border-top: 1px solid #888888;
+  margin: 10px 0px 40px; }
+
+.inti_long .font16 strong {
+  font-family: "Europa", sans-serif;
+  font-weight: 300;
+  font-size: 16px; }
+
+/* ----- highlights  ----- */
+.inti_long #acc_highlights td {
+  display: block; }
+
+.inti_long #acc_highlights p {
+  margin: 10px 0 10px 0 !important; }
+
+.inti_long #acc_highlights .font16 {
+  display: block; }
+
+.inti_long #acc_highlights td table {
+  width: auto;
+  border: solid 1px #c6c6c6;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px; }
+
+.inti_long #acc_highlights td table td {
+  display: table-cell; }
+
+.inti_long #acc_highlights table td table th {
+  background-color: #c6c6c6;
+  padding: 10px;
+  text-align: left !important; }
+
+.inti_long #acc_highlights table td table td {
+  padding: 0px 10px 0px 10px;
+  text-align: left !important; }
+
+.inti_long #acc_highlights table ul {
+  padding-left: 15px; }
+
+.inti_long #acc_highlights td:nth-child(2) {
+  display: none; }
+
+.inti_long #acc_highlights .brownTable td:nth-child(2) {
+  display: table-cell; }
+
+.inti_long #acc_highlights .brownTable table {
+  width: 100% !important; }
+
+.inti_long #acc_highlights .brownTable td p {
+  margin: 0px !important; }
+
+.inti_long #acc_highlights .brownTable td {
+  padding: 5px;
+  border-bottom: solid #cccccc 1px; }
+
+/* ----- structure  ----- */
+.inti_long #acc_structure table {
+  width: 100% !important; }
+
+.inti_long #acc_structure table td {
+  width: 100%;
+  display: block; }
+
+.inti_long #acc_structure table td table {
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  background-color: #fff; }
+
+.inti_long #acc_structure table td table th {
+  background-color: #363636;
+  color: #fff;
+  padding: 10px; }
+
+.inti_long #acc_structure table td table td {
+  padding: 0px; }
+
+.inti_long #acc_structure table ul {
+  padding: 0px;
+  column-count: 3; }
+
+.inti_long #acc_structure table ul li {
+  padding-right: 10px; }
+
+.inti_long #acc_structure table td table p {
+  padding: 5px; }
+
+.inti_long #acc_structure table ul li:last-child {
+  border: none; }
+
+.inti_long #acc_structure p {
+  margin-top: 0px !important; }
+
+.inti_long #acc_structure .brownTable table {
+  width: 100% !important;
+  text-align: left !important;
+  background-color: #fff; }
+
+.inti_long #acc_structure .brownTable p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
+.inti_long #acc_structure .brownTable {
+  margin-bottom: 15px;
+  margin-right: 15px; }
+
+.inti_long #acc_structure .brownTable table th:nth-child(1) {
+  width: 50%; }
+
+.inti_long #acc_structure .brownTable table th:nth-child(2) {
+  width: 25%; }
+
+.inti_long #acc_structure .brownTable table th:nth-child(3) {
+  width: 25%; }
+
+.inti_long #acc_structure .brownTable table td {
+  width: auto;
+  text-align: center; }
+
+.inti_long #acc_structure table td .brownTable table td {
+  text-align: left !important;
+  padding: 0px; }
+
+.inti_long #acc_structure .brownTable table tr td:nth-child(1) {
+  text-align: left !important; }
+
+.inti_long #acc_structure .brownTable table th {
+  background-color: #363636;
+  color: #fff;
+  padding: 10px; }
+
+.inti_long #acc_structure .brownTable table td {
+  border-bottom: solid #cccccc 1px;
+  padding: 5px; }
+
+/* ----- campus intake  ----- */
+.inti_long #acc_campus_intake .campusClicker {
+  width: 32%;
+  background-color: #fff;
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 10px;
+  height: auto !important;
+  min-height: 270px; }
+
+.inti_long #acc_campus_intake strong {
+  text-align: left !important;
+  display: block;
+  display: flex;
+  background-color: #363636;
+  color: #fff !important;
+  padding: 10px;
+  min-height: 60px;
+  align-items: center; }
+
+.inti_long #acc_campus_intake br {
+  height: 0px;
+  display: none; }
+
+.inti_long #acc_campus_intake .campusClicker strong a {
+  color: #fff !important; }
+
+.inti_long #acc_campus_intake .campusClicker p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
+.inti_long #acc_campus_intake .campusClicker .campusPhoto {
+  height: 180px;
+  background-color: #e0e0e0;
+  background-size: cover !important; }
+
+.inti_long #acc_campus_intake .campusClicker.penang .campusPhoto {
+  background: url(/wp-content/uploads/2018/02/IICP533.jpg) no-repeat;
+  background-position-y: -30px; }
+
+.inti_long #acc_campus_intake .campusClicker.subang .campusPhoto {
+  background: url(/wp-content/uploads/2018/02/IICS533.jpg) no-repeat;
+  background-position-y: -18px; }
+
+.inti_long #acc_campus_intake .campusClicker.kl .campusPhoto {
+  background: url(/wp-content/uploads/campuses/IICKL_campus_small.jpg) no-repeat; }
+
+.inti_long #acc_campus_intake .campusClicker.sabah .campusPhoto {
+  background: url(/wp-content/uploads/campuses/ICS_campus_small.jpg) no-repeat;
+  background-position-y: -50px; }
+
+.inti_long #acc_campus_intake .campusClicker.nilai .campusPhoto {
+  background: url(/wp-content/uploads/campuses/IU_campus_small.jpg) no-repeat; }
+
+.inti_long #acc_campus_intake .campusClicker ul {
+  padding: 0px;
+  margin: 0px !important;
+  list-style: none; }
+
+.inti_long #acc_campus_intake .campusClicker ul li {
+  border-bottom: solid #cccccc 1px;
+  padding: 5px; }
+
+.inti_long #acc_campus_intake .campusClicker ul li:before {
+  content: "";
+  display: inline-block;
+  font: normal 14px/1 FontAwesome;
+  color: #888888;
+  margin-right: 10px; }
+
+/* ----- entry requirements  ----- */
+.inti_long #acc_entry_requirements table {
+  width: 100% !important;
+  text-align: left !important;
+  background-color: #fff;
+  margin-bottom: 20px; }
+
+.inti_long #acc_entry_requirements p {
+  margin-top: 0px !important; }
+
+.inti_long #acc_entry_requirements table td, .inti_long #acc_entry_requirements table th {
+  text-align: left !important;
+  width: 50%; }
+
+.inti_long #acc_entry_requirements table th {
+  background-color: #363636;
+  color: #fff;
+  padding: 10px; }
+
+.inti_long #acc_entry_requirements table td {
+  border-bottom: solid #cccccc 1px;
+  padding: 5px; }
+
+/* ----- fees  ----- */
+.inti_long #acc_fees .tourTabber {
+  display: none; }
+
+.inti_long #acc_fees table {
+  width: 100% !important;
+  text-align: left !important; }
+
+.inti_long #acc_fees .blueTabberContent .brownTable {
+  width: 50%;
+  float: left; }
+
+.inti_long #acc_fees .blueTabberContent {
+  padding: 5px;
+  border-bottom: solid #cccccc 1px;
+  background-color: #fff;
+  float: none;
+  clear: both; }
+
+.inti_long #acc_fees .blueTabberContent::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.inti_long #acc_fees .blueTabberContent table p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
+.inti_long #acc_fees .blueTabberContent tr {
+  display: inline-block;
+  padding: 5px; }
+
+.inti_long #acc_fees .blueTabberContent tr:nth-child(1) {
+  display: table-row; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font12 {
+  font-size: 12px;
+  color: #888888;
+  width: auto !important;
+  float: left !important;
+  display: block;
+  padding-right: 100px; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font12 strong {
+  font-weight: normal;
+  padding: 5px 5px 0px 5px;
+  display: block; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font12 strong a {
+  text-decoration: underline;
+  color: #888888 !important;
+  font-weight: normal !important; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font14 {
+  font-size: 14px;
+  font-weight: 600; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font20 {
+  float: none !important;
+  background-color: #f0f0f0;
+  padding: 5px; }
+
+.inti_long #acc_fees .blueTabberContent tr td .font20 strong {
+  font-weight: 300;
+  font-family: "Europa", sans-serif;
+  font-size: 16px; }
+
+.inti_long #acc_fees .blueTabberContent tr:nth-child(2) th {
+  text-align: left !important;
+  font-weight: normal !important; }
+
+.inti_long #acc_fees .blueTabberContent tr:nth-child(3) td {
+  text-align: left !important;
+  padding-left: 5px; }
+
+.inti_long #acc_fees .blueTabberContent tr:nth-child(3) td {
+  color: #3595e1; }
+
+/* END RESET */
+.product-accredication-bar {
+  display: block;
+  padding: 30px; }
+
+.product-accredication-item {
+  border-right: solid 2px #e1e1e1;
+  min-height: 60px;
+  float: left;
+  margin-right: 10px;
+  padding-right: 10px; }
+
+.custom-product-label {
+  margin-right: 1px;
+  padding-right: 10px;
+  margin-bottom: 10px; }
+
+.product-accredication-item:last-child {
+  border: none; }
+
+.product-accredication-item img {
+  margin-top: 5px;
+  max-height: 40px;
+  max-width: 100%; }
+
+.product-accredication-item-label {
+  font-size: 12px; }
+
+.inti_custom_kpn, .inti_custom_product_single_social_sharing {
+  font-size: 14px;
+  margin: 30px 20px 30px 30px;
+  color: #888888; }
+
+.inti_custom_product_single_social_sharing {
+  border-top: solid 2px #e6e6e6;
+  padding-top: 30px; }
+
+#more-info-buttons-programme-vertical {
+  margin-bottom: 20px; }
+
+.inti_custom_single_product_buttons {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 20px; }
+  .inti_custom_single_product_buttons .programme-full-button {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    display: block; }
+    .inti_custom_single_product_buttons .programme-full-button .button-outline {
+      padding: 1% 2%; }
+  .inti_custom_single_product_buttons .programme-full-button:hover {
+    color: #282828;
+    text-decoration: none;
+    opacity: 0.5; }
+
+.inti_custom_single_product_buttons a:nth-child(2) {
+  margin-left: 1%;
+  width: 49%; }
+
+.related.products {
+  clear: both;
+  margin: 0px;
+  background-color: #eee;
+  padding-top: 30px; }
+
+.related.products h2 {
+  margin: auto;
+  text-align: center;
+  padding: 0px 30px; }
+
+.single-product .why-inti .vc_column-inner {
+  background-color: #ffffff !important; }
+
+/* ----- form styling for single product  ----- */
+.inti_custom_single_product_form {
+  margin-top: -250px; }
+
+#request-info.inti_custom_single_product_form .gform_widget {
+  width: auto;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+#request-info.inti_custom_single_product_form .gform_widget h2 {
+  font-size: 32px; }
+
+#request-info.inti_custom_single_product_form .gform_widget #field_1_24 {
+  display: none; }
+#request-info.inti_custom_single_product_form .gform_widget #field_1_10 {
+  display: none; }
+
+.inti_custom_single_product_form .gform_widget {
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.inti_custom_single_product_form .gform_body .col-sm-6 {
+  width: 100% !important; }
+
+.inti_custom_single_product_form .gform_heading, .inti_custom_single_product_form .gform_footer {
+  text-align: left; }
+
+/****************************************************************************************
+ * Products Category (Course)
+ ****************************************************************************************
+ */
+.products .product-category {
+  height: 300px !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1% !important;
+  background-color: #ffffff !important; }
+  .products .product-category a {
+    font-weight: normal; }
+  .products .product-category .woocommerce-loop-category__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40%; }
+  .products .product-category .woocommerce-category-description {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5% 10%;
+    text-align: left;
+    font-size: 14px; }
+.products .product .inti_custom_product_loop_short_description {
+  font-weight: normal;
+  height: 30%; }
+  .products .product .inti_custom_product_loop_short_description a {
+    outline: none; }
+  .products .product .inti_custom_product_loop_short_description p {
+    padding: 5px 20px; }
+
+/****************************************************************************************
+ * Programme Vertical Pages
+ ****************************************************************************************
+ */
+/* -- starts colors -- */
+.page-art-design #content .page-header h1:after {
+  background: #951b81; }
+
+.page-american-university-program #content .page-header h1:after {
+  background: #312783; }
+
+.page-business #content .page-header h1:after {
+  background: #e30613; }
+
+.page-biotechnology-life-sciences #content .page-header h1:after {
+  background: #00a97a; }
+
+.page-computing-it #content .page-header h1:after {
+  background: #eea100; }
+
+.page-engineering #content .page-header h1:after {
+  background: #7e65aa; }
+
+.page-hospitality #content .page-header h1:after {
+  background: #e74011; }
+
+.page-law #content .page-header h1:after {
+  background: #82275c; }
+
+.page-mass-communication #content .page-header h1:after {
+  background: #7c234b; }
+
+.page-pre-university-programmes #content .page-header h1:after {
+  background: #3aaa35; }
+
+.page-physiotherapy #content .page-header h1:after {
+  background: #398ccb; }
+
+.page-traditional-chinese-medicine #content .page-header h1:after {
+  background: #bd1d1d; }
+
+/* -- end colors -- */
+#programme-vertical-header.page-header .vc_btn3 {
+  color: #ffffff !important; }
+#programme-vertical-header.page-header .vc_btn3-icon:before {
+  color: #ffffff; }
+
+#programme-vertical-header .vc_col-has-fill {
+  min-height: 480px; }
+
+#programme-category-info {
+  background-color: #e6e6e6;
+  color: #3a3a3a;
+  display: none; }
+  #programme-category-info h1, #programme-category-info h2, #programme-category-info h3, #programme-category-info .h1, #programme-category-info .h2, #programme-category-info .h3 {
+    color: #3a3a3a; }
+  #programme-category-info .vc_btn3 {
+    text-transform: capitalize !important;
+    font-weight: 300 !important;
+    font-size: 24px !important;
+    color: #ffffff; }
+
+#programme-category-intro {
+  color: #3a3a3a;
+  background: transparent; }
+  #programme-category-intro h1, #programme-category-intro h2, #programme-category-intro h3, #programme-category-intro .h1, #programme-category-intro .h2, #programme-category-intro .h3 {
+    color: #3a3a3a; }
+  #programme-category-intro .vc_btn3 {
+    text-transform: capitalize !important;
+    font-weight: 300 !important;
+    font-size: 24px !important;
+    color: #ffffff; }
+
+.why-study-in-page-menu .wpb_wrapper .vc_btn3-container {
+  margin-top: auto !important; }
+
+.page-academic-programmes .content-intro .vc_column_container .vc_column-inner {
+  padding: 30px 50px; }
+.page-academic-programmes #programme-content .vc_column_container .vc_column-inner {
+  padding: 0 50px; }
+
+.highlight p {
+  display: inline;
+  background-color: #e20c18;
+  padding: 5px;
+  line-height: 40px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #ffffff; }
+
+/****************************************************************************************
+ * Individual Package
+ ****************************************************************************************
+ */
+.sidebar-form {
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+/******************************************************************************************
+ * AGCS
+ *****************************************************************************************
+ */
+.box-title h3 {
+  font-size: 18px; }
+
+.inti-header-cat-subtitle {
+  font-family: "Europa", sans-serif !important;
+  font-weight: 200 !important;
+  font-size: 20px !important; }
+
+.inti-header-cat-cta, .inti-subheader-cta {
+  font-family: "Arial", sans-serif !important;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  margin-top: 30px !important; }
+  .inti-header-cat-cta i, .inti-subheader-cta i {
+    margin-left: 30px !important; }
+
+.inti-subheader-cta {
+  font-weight: bold;
+  font-size: 13px !important;
+  text-transform: none; }
+  .inti-subheader-cta i {
+    margin-left: 10px !important;
+    color: #e30613; }
+
+.dark-grey-header-6-col {
+  background-color: #282828;
+  color: #ffffff; }
+
+.red-header-5-col-7-col {
+  background-color: #e30613;
+  color: #ffffff;
+  padding: 0px !important; }
+
+.wpb_single_image {
+  margin: 0 !important;
+  padding-right: 0; }
+
+.light-grey-header-6-col {
+  background-color: #eeeeee !important; }
+  .light-grey-header-6-col h2 {
+    font-size: 46px !important;
+    margin-bottom: 50px !important; }
+
+.inti-col-6 {
+  padding: 50px; }
+  .inti-col-6 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .inti-col-6 ul > li {
+      font-size: 20px !important;
+      margin: 20px 0px !important; }
+      .inti-col-6 ul > li > i {
+        color: #e30613;
+        margin-left: 20px; }
+
+.inti-col-6-img {
+  padding: 0px !important;
+  margin: 0px !important; }
+
+.inti-header-all-col-6 {
+  padding: 10px 30px !important; }
+  .inti-header-all-col-6 h3 {
+    font-family: "Europa", sans-serif !important; }
+
+/********************************************************************************************
+ * Media Queries
+ ********************************************************************************************
+ */
+@media (max-width: 1199px) {
+  .woocommerce .products ul, .woocommerce ul.products {
+    padding: 15px; }
+
+  .single.single-product h1.product_title_small {
+    font-size: 16px !important; }
+
+  .single.single-product h2.product_shortname_large {
+    font-size: 60px !important; } }
+@media (max-width: 992px) {
+  .woocommerce ul.products li.product {
+    width: 48%;
+    margin: 5px 1% !important;
+    height: 250px; }
+
+  .inti_custom_single_product_form {
+    margin-top: 20px; }
+
+  .single.single-product #top-banner {
+    background-position: -100px center !important; }
+
+  .yith-woocompare-counter {
+    display: block;
+    float: none;
+    text-align: center; } }
+@media (max-width: 768px) {
+  .inti_long #acc_structure table {
+    width: 100% !important; }
+
+  .inti_long #acc_structure .brownTable {
+    margin-right: 0px; }
+
+  .inti_long #acc_structure table td {
+    width: 100%;
+    display: block; }
+
+  .inti_long #acc_campus_intake .campusClicker {
+    width: 49%; }
+
+  .inti_long #acc_fees .blueTabberContent .brownTable {
+    width: 100%; }
+
+  .inti_long #acc_fees .blueTabberContent .brownTable:nth-child(1) {
+    border-bottom: solid #e6e6e6 1px; }
+
+  .inti-header-all-col-6 {
+    padding: 15px !important; }
+
+  .inti_custom_product-long_desc ul li {
+    width: 100%;
+    margin-right: 0px; } }
+@media (max-width: 480px) {
+  .woocommerce ul.products li.product {
+    width: 96% !important;
+    margin: 5px 2% !important;
+    height: 250px; }
+
+  .inti_long #acc_campus_intake .campusClicker {
+    width: 100%;
+    margin-right: 0%; } }
+
+/*# sourceMappingURL=sass-programmes.css.map */

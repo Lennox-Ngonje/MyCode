@@ -1,0 +1,2947 @@
+/* 
+Theme Name:		 INTI 2020
+Theme URI:		 https://nmpidigital.com
+Description:	 INTI 2020 is a child theme of GeneratePress
+Author:			 NMPi 
+Author URI:		 https://nmpidigital.com
+Template:		 generatepress
+Version:		 1.0.0
+Text Domain:	 inti-2020
+*/
+
+
+/*
+    Add your custom styles here
+*/
+
+body{
+	-webkit-text-size-adjust: 100%;
+}
+
+
+
+/************************************************
+*************************************************
+Mobile scroll horizontal fix
+*************************************************
+************************************************/
+body .vc_section{
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+body .vc_section.content-section{
+	padding-left: 15px;
+	padding-right: 15px;
+} 
+
+body {
+	/*overflow-x: hidden;*/
+}
+/************************************************
+*************************************************
+End Mobile scroll horizontal fix
+*************************************************
+************************************************/
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body {
+font-family: europa, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/* Widths  */
+/*body.full-width-content .container.grid-container,*/
+.content-section, 
+.content-section.vc_section, 
+.content-section.vc_row, 
+#programme-category-intro,
+#explore,
+.search-results.full-width-content .container.grid-container,
+#find-a-programme.vc_section > div.vc_row {
+	max-width: 1400px; 
+	margin-left: auto;
+	margin-right: auto;
+}  
+
+/*body.full-width-content .container.grid-container, */
+.search-results.full-width-content .container.grid-container{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+body.full-width-content.custom-class-vc-active .container.grid-container{
+	max-width: 100%; 
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/* End Widths  */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: europa, sans-serif;
+	position: relative;
+}
+
+/* Add to sass */
+.h1, .h2, .h3 { 
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    font-weight: 300;
+    text-transform: none;
+}  
+
+h1, .h1, .font-size-h1{
+	font-size: 48px !important;
+}
+
+h2, .h2{
+	font-size: 32px !important;
+} 
+
+h3, .h3{
+	font-size: 24px !important;
+}
+
+body ol{
+	margin-left: 20px;
+} 
+
+.hidden{
+	display: none;
+}
+
+#content h1:after,
+#content .h1:after, 
+#top-banner h1:after,
+#top-banner .h1:after{
+	content: "";
+	display: block;
+	width: 55px;
+	height: 5px;
+	background-color: #ec2028;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+}
+
+#content h1[style="text-align: center"]:after{
+	left: 50%;
+	margin-left: -27px;
+}
+
+.bullet-p p{
+	padding-left:  50px;
+	position: relative; 
+}
+
+.bullet-p p:before{
+	content: "";
+	display: block;
+	width: 30px;
+	height: 5px;
+	background-color: #ec2028;
+	position: absolute;
+	left: 0px;
+	top: 16px;
+}
+
+.font-size-24px{
+/*	font-size: 24px;*/
+	font-size: 18px;
+}
+
+.red-dots  ul{
+	margin-left: 0px !important; 
+	list-style: none !important;
+}
+
+
+.red-dots  ul li{
+	position: relative;
+	padding-left: 25px; 
+}
+
+.red-dots  ul li:before{
+	content: "\2022";
+	display: block;
+	font-size: 40px;
+	color: #ec2028;
+	position: absolute;
+	top: 0;
+	left: -5px;
+	/*line-height: 40px;*/
+	line-height: 27px; 
+}
+
+
+
+/* Keep this togeter (grid-container, grid-parent) */
+.grid-container{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.page #page.grid-parent,
+.single-product #page.grid-parent {
+	padding-left: 0;
+	padding-right: 0;
+} 
+/* END  */
+
+body .navigation-branding, body .site-logo.mobile-header-logo,
+body .main-navigation:not(.grid-container):not(.mobile-header-navigation) .inside-navigation.grid-container .navigation-branding,
+body #site-navigation .navigation-branding, body #sticky-navigation .navigation-branding{
+	margin-left: 0px;
+}
+
+
+/* home page video has margin forced from max-width */
+#content .margin-left-0px{
+	margin-left: 0 !important;
+}
+
+body.featured-image-active .grid-container.featured-image.page-header-image {
+    max-width: none;
+}
+
+body.featured-image-active .grid-container.featured-image.page-header-image + div.container{
+	margin-top: -150px;
+	position: relative;
+	z-index: 1;
+}
+
+
+.main-navigation {
+	background-color: #ffffff;
+}
+
+/*
+body .main-navigation .main-nav ul li a{
+	
+}
+*/
+
+body .main-navigation ul ul{
+		background-color: #eeeeee;
+		margin-top: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+}
+
+body .main-navigation ul ul li{
+	padding-left: 15px;
+}
+
+
+
+/*  Add at line 1526 - sass-style.css */
+.search-form{
+	position: relative;
+} 
+
+/*  Add at line 2228 - sass-style.css */
+.site-footer{
+	text-align: left;
+}
+
+/* sass-programmes.css */
+.product-labels-loop-inner:before{
+	width: auto;
+	height: 30px; 
+	display: block;
+	visibility: visible;
+}
+
+/* line 134 sass-programmes.css PAULC removed this a affected programme filter
+.woocommerce ul.products li.product{
+	display: list-item !important;
+}  
+*/
+
+.woocommerce ul.products li.product a{
+	display: inline !important;
+}
+
+.woocommerce ul.products li.product a.compare.button,
+.woocommerce ul.products li.product a.button.loop_new_link{
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+
+/* Remove Padding */
+#content.site-content{
+	padding: 0;
+}
+
+
+/*In sass file already - added to test */
+.page-header.vc_section:nth-child(1), 
+.page-header.vc_section {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important ; 
+    min-height: none !important; 
+   	overflow: hidden;
+}    
+
+.page-header.vc_section, #home-news-header{
+	min-height: 460px;
+}
+
+.page-header.vc_section > .vc_row-o-equal-height{
+	min-height: 65vh;
+}
+
+#home-news-header, .single.single-product.single-page #single-programme-header{
+	position: relative;
+    z-index: 1; 
+    min-height: 70vh !important;     
+}
+
+#home-news-header-inner, .single.single-product.single-page #single-programme-header #single-programme-header-inner{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	color: #ffffff;
+	padding: 30px 0;
+    min-height: 0;
+} 
+
+.single.single-product.single-page #top-banner{
+    background-position: center center;
+}
+
+.single.single-product.single-page #single-programme-header #single-programme-header-inner{
+    margin-bottom: 10vh;
+    left: 15px;
+    right: 15px;
+}
+
+
+body.single-post #page.grid-container{
+    margin-top: -10vh;
+    position: relative;
+    z-index: 5;
+    padding: 15px 25px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+
+#home-news-header-inner a{
+	color: #ffffff;
+}
+
+a.underline, .underline a{
+	border-bottom: 1px solid #ec2028;
+}
+
+
+/*In sass file already - added to test Remove below from sass  
+.inside-article section:nth-child(2) */
+body .inside-article section:nth-child(2),  
+.page-header.vc_section + div, 
+.page-header.vc_section + section{
+    padding-top: 25px !important;
+} 
+
+
+/*
+#top-banner{
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  background-position: center center
+}*/
+
+.home #top-banner{
+	margin-top: 0;
+}
+
+
+
+
+
+
+.single-post .single.single-product.single-page #single-programme-header #single-programme-header-inner{
+	max-width: none;
+}
+
+.custom-related li{
+	position: relative;
+	height: 250px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+ li  div.product.compare-button{
+	 width: 50%;
+	 position: absolute;
+	  bottom: 0px;
+	  left: 0;
+}
+
+/*absolute positioning should be applied on div (.custom-related li  .compare-button). Fix in sass-programmes.sass  */
+.products .custom-related .compare.button{
+     width: 100%;
+    text-align: center;
+    height: 34px;
+    padding: 0px;
+    line-height: 34px;
+    font-size: 12px;
+   
+    background-color: #d4d4d4;
+    color: #888888;
+}
+
+
+
+
+.video-bg{
+/*	min-height: 460px; */
+	min-height: 70vh;
+	padding-top: 50px; 
+	padding-bottom: 50px;
+    overflow: hidden;
+}
+
+
+.video-bg video{
+    max-width: none;
+    position: absolute;
+    top: -70vh;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+
+
+.white-text{
+	color: #ffffff; 
+}
+
+
+
+
+.vc_video-bg:after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: block;
+	content: "";
+}
+
+
+/*=== Paul Code === */
+
+/*
+.video-section{
+	position: relative;
+    height: 70vh;
+    overflow: hidden;
+	min-height: 70vh;
+	padding-top: 50px; 
+	padding-bottom: 50px;	
+}
+
+
+.video-section{
+	position: relative;
+    height: 70vh;
+    overflow: hidden;
+	min-height: 70vh;
+	padding-top: 50px; 
+	padding-bottom: 50px;	
+}
+
+.video-section:after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: block;
+	content: "";
+	z-index: 2;
+}
+
+
+.video-section-video-media {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.video-section-video-content{
+    position: absolute;
+    bottom: 25vh;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.video-section video{
+    width: 100%;
+    position: relative;
+    top: 25vh;	
+}
+*/
+
+
+/*=== End Paul Code === */
+
+
+.home #content a{
+	color: #3a3a3a;
+	border-bottom: 1px solid #ec2028;
+	-moz-box-shadow: inset 0 -1px 0 0 #ec2028;
+	-webkit-box-shadow: inset 0 -1px 0 0 #ec2028 ;
+	box-shadow: inset 0 -1px 0 0 #ec2028 ;
+	-webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -ms-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+.home #content a:hover{
+	color: #ffffff;  
+	box-shadow: inset 0 -30px 0 0 #ec2028;
+}
+
+.home #content a.vc_single_image-wrapper{
+	border-bottom: none;
+}
+
+.button2020,
+.vc_btn3-container.button2020.vc_btn3-inline{
+	display: block;      
+}
+
+
+/*
+#home-campus-cards {
+	margin-top: -100px;
+	position: relative;
+    -webkit-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background-color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	padding: 20px 40px;
+	z-index: 5;
+}
+*/
+
+
+.button2020 .vc_btn3{
+	padding: 0 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    font-size: inherit !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    text-transform: none;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.button2020 .vc_btn3 .vc_btn3-icon{
+	font-size: inherit !important;
+    height: auto !important;
+    line-height: normal !important;
+}
+
+.home-h1, .home-h1 h1{
+	font-size: 72px !important;
+	text-transform: uppercase !important;
+}
+
+.home-h1 h1:after{
+	display: none !important;
+}
+
+.home-h1 span{
+	display: block;
+	font-size: 72px;
+	text-transform: none !important;
+	color: #ec2028;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* together **/
+/* move to sass PC
+#request-info{
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+.page-template-template-campaign-landing .full-width-landing #request-info,
+.parent-pageid-985  #request-info,
+#request-info.inti_custom_single_product_form {
+	background-color: transparent;
+	z-index: 1;
+}
+*/
+/** End together **/
+
+.page-template-template-campaign-landing .page-header .transparent-btn a,
+.parent-pageid-985  .page-header .transparent-btn a,
+.parent-pageid-985  .page-header .transparent-btn .vc_btn3,
+.page-id-985  .page-header .transparent-btn .vc_btn3{ 
+	padding-left: 0px !important;
+} 
+
+.unique-selling,
+.why-inti-bullets{
+	padding-top: 25px;
+}
+
+/*
+.unique-selling ul,
+.why-inti-bullets ul{
+			list-style: none;
+			margin-left: 0;
+}
+*/
+
+.unique-selling ul li,
+.why-inti-bullets ul li{	
+	padding-left: 40px; 
+    padding-bottom: 15px;
+    position: relative;
+}
+				
+
+/*
+.unique-selling ul li:before{
+	color: #04d375  ;
+}*/
+
+
+#mobile-header button.menu-toggle{
+	color:  #3a3a3a;
+	height: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+#content{
+	/*overflow: hidden;*/
+}
+
+/* Already in sass file (sass-style.sass - 1668 line)*/
+.page-header .vc_col-has-fill .vc_column-inner > div{
+	left: 15px !important;
+    right: 15px !important;
+    bottom: 15px !important;
+}
+
+
+
+
+/*******************************************************
+New layout for product 
+********************************************************/
+/*.parent-pageid-985  #request-info{
+    margin-top: -470px;
+    position: relative;
+    z-index: 200;
+    opacity: 0.96;
+}
+
+.parent-pageid-985  #request-info .gform_widget {
+    -webkit-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+} 
+
+.parent-pageid-985  #request-info .gform_widget {
+    width: 90%;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 2%; 
+}*/
+
+/* Might need get this removed from sass */
+.page-header #academic-programme-header.vc_column_container > div{
+	padding: 0 !important;
+}
+
+
+.single.single-product #single-programme-header,
+ #academic-programme-header{
+    text-align: left;
+    padding-left: 15px !important;
+    padding-right: 45px;
+    min-height: 480px !important;
+    position: relative;
+}  
+
+.single.single-product #single-programme-header{
+    padding-right: 15px !important;
+}
+
+
+/*******************************************************
+New layout for product 
+********************************************************/
+
+#request-info.inti_custom_single_product_form .gform_widget,
+#request-info.inti_academic_form  .gform_widget {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body .inti_custom_single_product_form .gform_widget, 
+body .inti_academic_form  .gform_widget{
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px -2px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background-color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+
+/* From Programmes */
+.single.single-product #single-programme-header #single-programme-header-inner,
+.page-header #academic-programme-header.vc_column_container > div{
+    position: absolute;
+    bottom: 0px;
+    min-height: 250px;
+    max-width: 700px;
+    left: 15px;
+    right: 15px;
+    width: auto;
+}
+
+/*** End ****/
+
+.inti_custom_single_product_form .gform_heading, 
+.inti_custom_single_product_form .gform_footer, 
+.inti_academic_form .gform_heading, 
+.inti_academic_form .gform_footer{
+	text-align: left;
+}
+
+.inti_academic_form  .gform_widget .vc_column-inner{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#main-content-section.academic-programmes-main-section{
+	padding-top: 0 !important;
+}
+
+.col-inner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+} 
+
+#area-of-study-page-menu {
+	padding-top: 25px;
+	padding-bottom: 25px; 
+}
+
+#area-of-study-page-menu .widget ul:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+#area-of-study-page-menu .widget ul li{
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+}  
+
+#area-of-study-page-menu .widget ul li.current-menu-item a{
+	color: #e20c18;
+}
+ 
+
+.products .compare.button{
+	width: 100% !important;
+}
+
+
+
+/* Compare Button Below header - Single Programmes */
+
+body.single-product .inti_custom_product_single .compare-button{
+	float: right; 
+}
+
+body.single.single-product .programme-btn,
+body.single-product .inti_custom_product_single .compare.button,
+body.single-events #programme-intro input[type="submit"],
+body.single-events #programme-intro .tribe-events-gcal.btn {
+	margin-top: 0;
+    padding: 10px 20px !important; /* Dont remove !important. Overriding sass .btn !important tag */
+    font-weight: normal;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border: none; 
+    display: inline-block;
+    line-height: 1.5;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   font-size: 100% !important; /* Dont remove !important. Overriding sass .btn !important tag (1199 max width) */
+   text-transform: none;
+}
+
+body.single-events #programme-intro form{
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+body .brochure_url, .single-product.woocommerce div.product {
+	padding-top: 10px;
+}
+
+/*
+.single-product.woocommerce div.product{ 
+ 
+	float: right;
+}*/
+
+body .inti_custom_product-long_desc ul li{
+    width: 47%;
+    display: block;
+    float: left; 
+    margin-right: 3%;
+}
+
+body .inti_custom_product-long_desc ul li:nth-child(odd){
+    clear: left;
+} 
+
+body .inti_custom_product-long_desc ul:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+.secondary-navigation{
+	display: none;
+}
+
+body .main-navigation .main-nav ul ul li a{
+	line-height: 60px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/*
+#generate-slideout-menu.main-navigation .main-nav ul ul{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.slideout-navigation.main-navigation .main-nav ul.sub-menu li a{
+	padding-left: 25px;
+}
+
+.slideout-navigation.main-navigation .main-nav ul.sub-menu ul.sub-menu li a{
+	padding-left: 35px;
+}
+
+.slideout-navigation.main-navigation .main-nav ul.sub-menu ul.sub-menu ul.sub-menu li a{
+	padding-left: 45px;
+}
+*/
+.slide-style-3{
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Europa", sans-serif;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+    padding-bottom:5%;
+    padding-top:5%;
+}
+
+.heading-style-1 a{
+color: #e20c18 !important;
+}
+
+.heading-style-1::after {
+font-family: "icomoon"; 
+font-weight: 700; 
+content: "\e902";
+color:#000000;
+margin-left: 15px;
+}
+
+.employability-number h2
+{
+font-size: 45px !important;
+color: #e20c18;
+}
+
+.employability-number-text {
+font-size:18px;
+}
+
+.employability-number-text p {
+padding-right:40px;
+}
+
+.heading-style-2 a {
+    color: #ffffff !important;
+}
+
+.heading-style-2::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f061";
+    color: #e20c18;
+    margin-left: 15px;
+}
+
+.sidebar-padder{
+    background:#e6e6e6
+}
+
+.sidebar-padder  ul>li{
+    padding-bottom: 0 !important;
+}
+
+.sidebar-padder  ul>li>a{
+    padding:15px 15px;
+    border-top:1px solid #bebebe;
+    display: block;
+}
+
+.sidebar-padder ul ul>li>a{
+    padding:15px 25px;
+}
+
+.vvm p{
+    font-size: 22px;
+    text-align: left;
+}  
+
+
+.why-inti-button {
+	font-size: 29px;
+}
+
+.success-stories blockquote p {
+    padding-left: 40px;
+    padding-right: 80px;
+}
+
+.success-stories blockquote {
+    border-left: 5px solid red;
+    padding-bottom: 5px;
+}
+
+.success-stories .wpb_text_column.wpb_content_element {
+    padding-top: 30px;
+}
+
+.success-stories .vc_tta-panel-body {
+    padding-bottom: 30px !important;
+}
+
+   .success-stories h2 {padding-right: 80px;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+#inti-custom-events .event{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#inti-custom-events .event a{
+	color: #3a3a3a !important;
+    display: block;
+    border-bottom: none;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important; 
+} 
+
+#inti-custom-events .event a:hover a{
+    background-color: #ec2028;
+}
+
+#inti-custom-events .event-date{
+    width: 150px;
+    height: 150PX;
+    
+    background-color: #616161;
+    color: #FFF;
+    text-align: right;
+    font-size: 26px;
+    position: relative;
+    float: left;
+}
+
+#inti-custom-events .event-date .event-date-inner{
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    line-height: 0.9; 
+}
+
+#inti-custom-events .event-date .event-date-inner .date{
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+#inti-custom-events .event-info{
+   padding-left: 175px;
+
+}
+
+
+
+
+/****************************************************
+ Brandon Code 
+ ***************************************************/
+.ProgTable td, th {
+padding: 10px;
+}
+
+.ProgTable .table-heading {
+	background-color: #363636;
+    color: #fff !important;
+}
+.ProgTable tr {
+    background-color: #fff;
+    border-bottom: 1px solid #cccccc !important;
+}
+
+.ProgTable tr:last-child > td {
+    border-bottom: none !important; 
+}
+
+.ProgTable td, th {
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+.ProgTable td{
+	border-bottom: 1px solid #cccccc !important;
+} 
+
+.ProgTable .table-heading th {
+    background-color: #363636;
+    color: #fff !important;
+}
+
+.single-programme indent h4 {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: -7px;
+	color: #e30613;
+	text-indent: 15px;
+}
+
+.prog-struct-disc p {
+text-indent: 25px;
+font-size: 12px;
+}
+
+.single-programme h4 {
+font-weight: 700;
+font-size: 20px;
+margin-bottom: -7px;
+color: #e30613;
+}
+
+.summerCourseStructure td {
+background-color: #ffffff !important;
+border-bottom: 1px solid #ccc !important;
+padding-left: 10px;
+width: auto !important;
+display: table-cell !important;
+}
+
+.summerCourseStructure .table-heading {
+background-color: #363636;
+color: #ffffff !important;
+}
+
+.summerCourseStructure .table-heading th {
+background-color: #363636;
+color: #ffffff !important;
+}
+
+.faculty-profile-table .profile-image-cell {
+    width: 30%;
+}
+
+.faculty-profile-table {
+    border: none !important;
+}
+
+.faculty-profile-table tbody, tr, td {
+    border: none !important;
+}
+
+/* Needs to be in sass */
+/*
+.why-inti-bullets{
+    clear: both;
+    border-top: solid 1px #e6e6e6;
+    font-family: "Europa", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.why-inti-bullets ul li {
+position: relative;
+margin-bottom: 12px;
+width: calc(47% - 30px);
+margin-right: 2.9%;
+padding-left: 39px;
+display: inline-flex;
+}
+
+.why-inti-bullets ul {
+list-style: none;
+padding-left: 0px;
+margin: 50px 0px 50px 0px;
+}
+
+
+.why-inti-bullets ul li:before {
+font-family: icomoon;
+content: "";
+display: inline-block;
+width: 24px;
+height: 24px;
+position: absolute;
+left: 1px;
+top: 1px;
+color: #69bf7f;
+font-size: 90%;
+text-align: center;
+align-items: center;
+justify-content: center;
+padding: 0px;
+margin: 0px;
+}
+
+.why-inti-bullets ul li:after {
+content: "";
+display: inline-block;
+width: 24px;
+height: 24px;
+border: 1px solid #69bf7f;
+border-radius: 50%;
+position: absolute;
+left: 0px;
+top: 0px;
+} 
+*/
+
+/*Sass Programmes 655 */
+.why-inti-bullets, .unique-selling {
+border-top: none !important;
+}
+
+.inti_long .no-style-table {
+background: none !important;
+border: none !important;
+}
+
+/****************************************************
+ End Brandon code 
+ ***************************************************/ 
+
+.inti_long > div > button.active + .tab-content{
+	padding: 0px 15px 25px 15px;
+}
+
+/*Override in sass style */
+body .home-cards {
+	padding: 0px 20px;
+}
+
+
+.home-cards.content-section{
+	max-width: 1370px;
+	padding-top: 0px !important; 
+}
+/*
+.home-cards.content-section .font-size-h1{
+	margin-top: 15px !important;
+}  
+
+
+.footer-widgets-container, .inside-site-info{
+	padding-left: 15px;
+	padding-right: 15px;
+}*/
+
+body .main-navigation .mobile-bar-items a{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*
+body .menu-toggle{
+	padding-left: 5px;
+}
+*/
+
+.navigation-search{
+	background-color: rgba(0,0,0,0.4);
+}
+
+.navigation-search.nav-search-active{
+	top: 100%;
+} 
+
+
+/*FULL SCREEN SEARCH POPUP */
+/*.navigation-search.nav-search-active{
+	height: 200vh;
+	background-color: rgba(0,0,0,0.8);
+	padding-left: 15px;
+	padding-right: 15px; 
+}
+
+.navigation-search input{
+	position: relative;
+	top: 50vh;
+	margin-top: -30px;
+}
+
+.navigation-search input[type="search"]:focus,
+.navigation-search input[type="search"] {
+    background-color: #222;
+    color: #fff;
+}
+
+.navigation-search input::-webkit-input-placeholder { 
+  color: #fff;
+}
+
+.navigation-search input::-moz-placeholder { 
+  color: #fff;
+}
+
+.navigation-search input:-ms-input-placeholder { 
+  color: #fff;
+}
+
+.navigation-search input:-moz-placeholder { 
+  color: #fff; 
+}
+ END FULL SCREEN SEARCH POPUP */
+
+.video-section-video-media > .wpb_column{
+	height: 100%;
+}
+
+/*  FOOTER */
+body .footer-widgets{
+	padding-left: 0px;
+	padding-right: 0px; 
+}
+
+body .site-footer .footer-widgets-container .inside-footer-widgets{
+		/*padding-left: 15px;
+    padding-right: 15px;*/
+    margin-left: 0;
+}
+
+body .site-footer .footer-widgets-container .inside-footer-widgets div[class*="footer-widget-"]{
+	padding-right: 15px;
+}
+
+body  .site-footer .footer-widgets-container .inner-padding{
+	padding: 0px 0px 0px 0px;
+}
+
+body  .site-info {
+	padding-left: 0px;
+	padding-right: 0px; 
+} 
+
+body  .site-info .inside-site-info { 
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* END FOOTER */
+
+/* Search Results */
+.search-results .generate-columns-container{
+	margin-left: 0;
+}
+/* End Search Results */
+
+
+/* Back to top  moved to SASS - PAul
+body .generate-back-to-top, body .generate-back-to-top:visited{
+	width: 60px; 
+	height: 60px;
+	line-height: 60px;
+	-webkit-border-radius: 100%; 
+	-moz-border-radius: 100%; 
+	border-radius: 100%; 
+}
+*/
+/* End back to top */
+
+body .timeline-line{
+	position: relative;
+}
+
+body .timeline-line .vc_icon_element-icon.fa-circle:before{
+	background-color: #ffffff;
+	position: relative;
+	z-index: 2;
+} 
+
+
+
+/* ADD TO SASS IF NO ISSUES PICKED UP (sass-style 1106)*/
+.btn, .gform_button.button, .invert-btn button, .invert-btn .btn, .invert-btn .vc_btn3, 
+.green-btn button, .green-btn .btn, .green-btn .vc_btn3, .white-btn button, 
+.white-btn .btn, .white-btn .vc_btn3, .transparent-btn button, .transparent-btn .btn, 
+.transparent-btn .vc_btn3, .big-btn button, .big-btn .btn, .big-btn .vc_btn3, .vc_btn3{
+	height: auto;
+}
+
+/* Ken Burns slideshow  
+.slideshow-ken-burns:before{
+	z-index: 2;
+}
+
+.slideshow-ken-burns .slideshow-content{
+	z-index: 3 !important;
+}
+
+.slideshow-ken-burns .slideshow-image{
+	z-index: 1;
+}
+ End Ken Burns slideshow  */
+
+
+
+/* Overlay on banner effect */
+.header-pull-up .vc_row.vc_row-o-content-bottom>.vc_column_container>.vc_column-inner{
+	padding-bottom: 125px !important;
+}
+
+
+.content-pull-up{
+	margin-top: -100px;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    border-radius: 20px;
+}
+/* End Overlay on banner effect */
+
+.vc_tta-tabs-container{
+	background-color: transparent !important;
+} 
+
+
+body .slideshow-image{
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+}
+
+.page-header.dark-header:before{
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	content: "";
+	z-index: 1;
+}
+
+.custom-feat-img {
+	width: 100%;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.custom-feat-img a{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*
+body .vc_row[data-vc-full-width]{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+*/
+
+/* Programmes and inline display filter */
+
+#find-a-programme.vc_section{
+    background-color: #eeeeee;
+} 
+
+#programme-filter-results-wrapper{
+	overflow: auto;
+	width: 100%;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.programme-filter-results{
+	white-space: nowrap;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.programme-filter-results .results{
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+.programme-filter-results .results img{
+	margin-bottom: -5px;
+}
+
+
+body .yith-woocompare-counter{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/* End Programmes inline display filter */
+
+.single-events .single.single-product #top-banner:after{
+	display: none;
+}
+
+
+/* Top Menu/Logo */
+body .navigation-branding img,
+body .site-logo.mobile-header-logo img{
+	height: 60px;
+	padding: 15px 0; 
+}
+/* END Top Menu/Logo */
+
+#generate-slideout-menu .inside-navigation{
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+#generate-slideout-menu.main-navigation .main-nav ul ul{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;	
+}
+
+body .dropdown-menu-toggle:before,
+body nav:not(.toggled) ul ul .dropdown-menu-toggle:before{
+	text-align: right;
+}
+
+/* Needs !important */
+#breadcrumbs{
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+
+.paging-navigation .nav-links .page-numbers{
+	padding: 15px 15px;
+    border: 1px solid #bebebe;
+    display: inline-block;
+}
+.paging-navigation .nav-links .page-numbers.current{
+	color: #e20c18;
+}
+
+.widget_recent_entries.widget ul{
+	margin-left: 20px;
+}
+
+.widget_recent_entries.widget ul li{
+	list-style: disc;
+	padding-bottom: 15px;
+}
+
+.woocommerce ul.products li.product.featured {
+	position: relative;
+}
+
+
+.woocommerce ul.products li.product.featured:after{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 35px;
+	height: 35px;
+	background: url(images/new-label3.png) center center no-repeat;
+}
+
+
+/***************************************************************
+Replace FontAwesome with Icomoon
+Individual icons will still need to be set manually
+*****************************************************************/
+
+.fa.fa-long-arrow-down:before{
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	letter-spacing: 0;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	font-feature-settings: "liga";
+	-webkit-font-variant-ligatures: discretionary-ligatures;
+	font-variant-ligatures: discretionary-ligatures;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	content: "\e90d" !important; 
+}
+
+/***************************************************************
+End Replace FontAwesome
+*****************************************************************/
+
+
+/***************************************************************
+Request a Quote - Scroll and page buttons
+*****************************************************************/
+
+/* Default pages */
+.r-i-page-link{
+
+}
+
+.r-i-scroll-link{
+	display: none !important;
+}
+
+/* Scroll form pages*/
+.page-academic-programmes .r-i-scroll-link,
+.single-product .r-i-scroll-link,
+.page-request-information .r-i-scroll-link,
+.page-explore .r-i-scroll-link{
+	display: inline-block !important;
+}
+
+.page-academic-programmes .r-i-page-link,
+.single-product .r-i-page-link, 
+.page-request-information .r-i-page-link,
+.page-explore .r-i-page-link{
+	display: none !important; 
+}  
+/***************************************************************
+END Request a Quote - Scroll and page buttons
+*****************************************************************/
+	
+
+@media (min-width: 768px) {
+	body .navigation-branding img,
+	body .site-logo.mobile-header-logo img{
+		height: 50px;
+	}
+
+    .inti_custom_single_product_form, 
+    .inti_academic_form {
+        margin-top: -250px;
+
+    }
+
+    #area-of-study-page-menu ul li{
+        float: left;
+        width: 33.33%;
+    }
+
+    .unique-selling ul li{	
+		margin-right: 90px;
+	}
+	body .timeline-line .first-timeline .vc_icon_element-icon.fa-circle:after,
+	body .timeline-line .last-timeline .vc_icon_element-icon.fa-circle:after{
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;	
+		background-color: #ffffff;
+		z-index: 1;
+	}
+
+	body .timeline-line .first-timeline .vc_icon_element-icon.fa-circle:after{
+		left: -45px;
+		right: 5px;
+	}
+
+	body .timeline-line .last-timeline .vc_icon_element-icon.fa-circle:after{
+		left: 5px;
+		right: -185px;
+	}
+
+	body .timeline-line:before{
+		position: absolute;
+		top: 28px;
+		left: 0px;
+		right: 0;
+		background-color: #ec2028;
+		height: 4px;
+		content: "" !important;
+		display: block !important;
+	}
+
+	.page-events #inti-custom-events .event{
+		float: left;
+		width: 50%;
+	}
+
+	.page-events   #inti-custom-events .event-2-col > .event:first-child{
+		padding-right: 15px;
+	}
+
+	.page-events   #inti-custom-events .event-2-col > .event:first-child + .event{
+		padding-left: 15px;
+	}
+
+}
+
+/*=== Mega Menu === */
+@media (min-width: 769px) {
+    nav .main-nav .mega-menu {
+        position: static;
+    }
+
+    nav .main-nav .mega-menu > ul {
+        position: absolute;
+        width: 100%;
+        left: 0 !important;
+        overflow: hidden !important;
+        margin-top: 0 !important; /*Need !important */
+    }
+
+    nav .main-nav .mega-menu > ul > li > a {
+        font-weight: bold;
+    } 
+
+    nav .main-nav .mega-menu>ul>li {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+
+    nav .main-nav .mega-menu.mega-menu-col-2>ul>li {
+        width: 50%;
+    }
+
+    nav .main-nav .mega-menu.mega-menu-col-3>ul>li {
+        width: 33.3333%;
+    }
+
+    nav .main-nav .mega-menu.mega-menu-col-5>ul>li {
+        width: 20%;
+    }
+
+    nav .main-nav .mega-menu > ul > li:hover > a,
+    nav .main-nav .mega-menu > ul > li:focus > a,
+    nav .main-nav .mega-menu > ul > li[class*="current-"] > a,
+    nav .main-nav .mega-menu ul ul {
+        background-color: transparent !important;
+        color: inherit;
+    }
+
+    nav .main-nav .mega-menu ul .sub-menu {
+        position: static;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+		-moz-box-shadow: 0 0 0;
+		-webkit-box-shadow: 0 0 0 ;
+		box-shadow: 0 0 0 ; 
+        left: 0;
+        height: auto;
+    }
+
+
+
+    nav .main-nav .mega-menu ul.toggled-on .sub-menu {
+        pointer-events: auto;
+    }
+
+    nav .main-nav .mega-menu .sub-menu .menu-item-has-children .dropdown-menu-toggle {
+        display: none;
+    }
+
+    /* Justin */
+
+    nav .main-nav .mega-menu>ul>li.span2col{
+    	width: 50%;
+    	direction: rtl; 
+    }
+
+    nav .main-nav .mega-menu>ul>li.span2col:after,
+    nav .main-nav .mega-menu>ul>li.span3col:after{
+    	display: block;
+    	content: "";
+    	background-color: #cccccc;
+    	position: absolute;
+    	width: 1px;
+    	height: 640px;
+    	right: 0;
+    	top: 0;
+    }
+
+     nav .main-nav .mega-menu>ul>li.span3col:after{
+     	top: auto;
+     	bottom: 0;
+     }
+
+    nav .main-nav .mega-menu>ul>li.span3col:before{
+    	display: block;
+    	content: "";
+    	background-color: #cccccc;
+    	position: absolute;
+    	
+    	height: 1px;
+    	right: -350px;
+    	left: 0px; 
+    	top: 0;
+    }
+
+     nav .main-nav .mega-menu>ul>li.span3col{
+    	width: 75%;
+    	background-color: #eeeeee;
+    }
+
+    nav .main-nav .mega-menu>ul>li.span2col > a, 
+    nav .main-nav .mega-menu>ul.sub-menu>li.menu-item-has-children  > a{
+    	font-size: 24px;
+    } 
+
+    nav .main-nav .mega-menu>ul>li.span2col > a:hover, 
+    nav .main-nav .mega-menu>ul.sub-menu>li.menu-item-has-children  > a:hover{
+    	border-bottom: 1px solid transparent;
+    } 
+
+    nav .main-nav .mega-menu>ul>li.span2col ul li{
+    	width: 50%;
+    }
+
+     nav .main-nav .mega-menu>ul>li.span2col ul li.main-link{
+     	width: 100%;
+     	float: none;
+     }
+
+     nav .main-nav .mega-menu>ul>li>ul>li.main-link{
+     	margin-top: 20px; 
+     }
+
+     nav .main-nav .mega-menu>ul>li>ul>li.main-link:first-child{
+     	margin-top: 0;
+     }
+
+     nav .main-nav .mega-menu>ul>li>ul>li.main-link > a{
+    	font-weight: bold;
+    	font-size: 16px;
+    } 
+
+    body .main-navigation ul ul li{
+		padding-left: 0px;
+	}
+    
+    nav .main-nav .mega-menu>ul>li.span2col .left-link{
+    	float: left;
+    	clear: left;
+    }
+
+    nav .main-nav .mega-menu>ul>li.span2col .right-link{
+    	float: none;
+    }
+
+    .submenu-button a,
+    .main-navigation .main-nav ul ul li.submenu-button a{
+    	color: #ec2028;
+    	font-size: 16px;
+    }
+
+    .submenu-button span{
+    	display: block;
+    	font-size: smaller;
+    	color: #000000;
+    }
+
+    .secondary-navigation{
+		display: block;
+	}  
+
+	/*Main Nav Styling*/
+	body .main-navigation .main-nav ul li a{
+		border-bottom: 1px solid transparent;
+	}
+
+	body .main-navigation .main-nav > ul > li >a{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	body .main-navigation .main-nav ul li a:hover{
+		border-bottom: 1px solid #e20c18;
+	}
+
+	/*Main Nav Styling*/
+	
+
+	body .main-navigation .main-nav ul li.request-info a{
+		background-color: #e20c18;
+		color: #ffffff;
+		margin-left: 0;
+		margin-right: 0 ;
+	}
+
+	body .main-navigation .main-nav ul li.request-info a:active{
+		color: #ffffff;
+	}
+
+
+	body .programmes-menu-item{
+		border-left: none; 
+		border-right: none;
+	}
+ 
+
+
+
+	body .main-navigation .main-nav ul ul li a {
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		line-height: normal;
+	}  
+
+
+
+	body .main-navigation .main-nav ul li a{
+		line-height: 42px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 8px;
+    	margin-right: 8px;
+		/*border-bottom: 1px solid transparent;*/
+	}
+
+	body .main-navigation .main-nav ul li a:hover{
+		/*border-bottom: 1px solid #e20c18;*/
+	}
+
+	body .main-navigation .main-nav ul li a:active,
+	body .main-navigation .main-nav .current-menu-item > a,
+	body .main-navigation .main-nav .current-menu-ancestor > a,
+	.main-navigation ul ul a:hover{
+		color: #e20c18;
+	}
+
+	body .menu-item-has-children .dropdown-menu-toggle {
+		padding-right: 0;
+	}
+
+	/*body .navigation-branding img{
+		padding: 15px 0; 
+	}*/
+
+	
+
+	.main-navigation ul ul a{
+		color: #000000;
+	} 
+
+
+
+
+	/* Top Menu/Logo */
+	
+	body .main-navigation #primary-menu > ul.menu,
+	body #secondary-navigation ul.secondary-menu{
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	body  .main-navigation ul li.request-info a{
+		    padding-left: 8px;
+    		padding-right: 8px;
+	} 
+	/* END Top Menu/Logo */
+
+
+}/* __mega menu */
+
+
+@media (min-width: 992px){
+	.col-md-8 {
+	    width: 66.666666667%;
+	    float: left;
+	}
+
+	.col-md-4 {
+	    width: 33.333333333%;
+	    float: left;
+	}
+
+	.col-md-12{
+		 width:100%;
+		 float: left;
+	}
+
+	body .navigation-branding img{
+		height: 85px;
+	}
+
+	body .home-cards{
+		padding: 20px 40px;
+	}
+
+	.home-cards.content-section {
+	    padding-top: 15px !important;
+	}
+
+			
+}
+
+@media (min-width: 1200px){
+
+	#home-news-header-inner .h1 {
+		max-width: 60%; 
+	}
+
+	#home-yfbt{ 
+		padding-right: 10%; 
+	}
+
+	/* Got width from .unique-selling ul li -  sass-programmes (line 654) */
+	.academic-programmes-main-section .button2020, 
+	.academic-programmes-main-section .vc_btn3-container.button2020.vc_btn3-inline{
+		display: inline-block;
+	    width: calc(47% - 30px);
+	    margin-right: 2.9%;
+	    margin-top: 0 !important;
+	}  
+
+
+	body .main-navigation .main-nav ul li a{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	body .main-navigation ul li.request-info a{
+		    padding-left: 20px;
+    		padding-right: 20px;
+	} 
+
+	.vvm p,
+	.padding-right-150{
+		padding-right: 150px;
+	}
+
+}
+
+/* MEGA menu on big small screen fixes */
+@media (min-width: 769px)  and (max-height: 860px){
+  body .main-navigation #primary-menu > ul.menu  > li > ul.sub-menu{
+    	max-height: 100vh;
+    	overflow: auto !important;
+    }
+
+    nav .main-nav .mega-menu>ul>li.span2col:after, 
+    nav .main-nav .mega-menu>ul>li.span3col:after,
+    nav .main-nav .mega-menu>ul>li.span3col:before{
+    	display: none;
+    }
+
+    nav .main-nav .mega-menu>ul>li.span2col+li{
+    	border-left: 1px solid #cccccc;
+    	border-right: 1px solid #cccccc;
+    }
+
+     nav .main-nav .mega-menu>ul>li.span3col{
+     	border-right: 1px solid #cccccc;
+     	padding-bottom: 125px;
+     }
+
+    nav#sticky-navigation .main-nav .mega-menu>ul>li.span3col{
+    	padding-bottom: 85px;
+    }
+     
+
+    nav .main-nav .mega-menu>ul>li.span3col,
+    nav .main-nav .mega-menu>ul>li.span3col+li{
+    	border-top: 1px solid #cccccc;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+	.academic-programmes-main-section >  .content-section > .vc_col-sm-8,
+	#academic-programme-header.vc_col-sm-8 {
+    	width: 58.33333333%;
+	}
+
+
+	.academic-programmes-main-section >  .content-section > .vc_col-sm-4 {
+	    width: 41.66666667%;
+	}
+}
+
+
+
+/******
+RESPONSIVE 
+ADDED 14-02-2020
+*******/
+
+.video-section{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+@media (max-width: 1430px){
+	.home-cards, .content-pull-up{
+		margin-left: 15px !important;
+		margin-right: 15px !important;
+	}
+} 
+
+@media (max-width: 1199px){
+	body .no-margin-top{
+		margin-top: 0 !important;
+	}  
+
+	
+
+	/* Top Banner  */
+	#top-banner #top-banner-inner{
+		background-position: center center !important; 
+	}
+	/* END Top Banner */
+
+	.home-h1, .home-h1 h1, .home-h1 span{
+		font-size: 40px !important;
+	}
+
+	/* Events home page/Archive */
+	#inti-custom-events .event-date{
+		width: 100px;
+		height: 100px;
+	}
+
+	#inti-custom-events .event-date{
+		font-size: 18px;
+	}
+
+	#inti-custom-events .event-info{
+		padding-left: 125px;
+	}
+
+	#inti-custom-events .event-date .event-date-inner .date{
+		font-size: 22px;
+		line-height: 1.6;
+
+	}
+	/* END Events home page/Archive */
+
+	body .video-section video {
+	    width: auto;
+	    height: auto;
+	    top: 0;
+	    min-width: 100%;
+	    min-height: 100%;
+	}
+
+
+	/* Single course top info */
+	body .custom-product-label{
+		margin-bottom: 0;
+	}
+
+	body .product-labels.pull-left{
+		float: none;
+		margin-bottom: 0;
+	} 
+
+	body.single-product .inti_custom_product_single .compare-button{
+		float: left;
+		padding-left: 30px;
+		padding-bottom: 20px;
+	}
+
+	body .brochure_url.pull-right{
+		float: none;
+		display: inline-block;
+		padding-bottom: 20px
+	}
+	/* End Single course top info */
+
+
+	body .unique-selling ul li,
+	body .why-inti-bullets ul li{
+		width: 100%;
+	} 
+
+	/* Add to sass style.sass. Line 3589*/
+	body .vc_single_image-wrapper{
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	} 
+
+	/* keep !important (Sass has !importatant tags)*/
+	body .footer-bar .widget_nav_menu>div>ul{
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	/* body has !important size in sass. Fontsize should at least be 16px to avoid zoom issue of Apple devices */
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	select,
+	select:focus,
+	textarea,
+	.chosen-container,
+	.gform_wrapper .gfield_checkbox li label, 
+	.gform_wrapper .gfield_radio li label{
+	  font-size: 16px !important; 
+	} 
+	
+}
+
+@media (max-width: 991px){
+
+	
+
+	/* Added in SASS-STYLE.CSS*/
+	body h1, body .h1, body .single-post #post-slider-title body .h2,
+	.home-h1, .home-h1 h1, .home-h1 span{
+		font-size: 32px !important;
+	}
+
+
+	#secondary-navigation .main-nav .secondary-menu{
+		padding-right: 40px;
+	}
+
+	.main-navigation li.search-item{
+		position: absolute;
+		top: -40px;
+		right: 15px;
+		z-index: 1;
+	}
+
+	body .main-navigation .main-nav > ul > li.search-item >a{
+		line-height: 40px ;
+		margin-top: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+		color: #ffffff;
+	}
+
+
+}
+
+@media (max-width: 480px){
+	body .video-section video {
+	    left: -25%;
+	}
+}
+
+
+/******************************************************************************************
+Backgrounds
+*******************************************************************************************/
+
+/* PAUL C Commenting out as we will be using the featured pic for this
+
+.single.product_cat-american-university-program #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/American-University-Program-Students.jpg?id=2699')!important;
+		background-repeat:no-repeat!important;
+		background-position:center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-american-university-program #top-banner>.container>div h1
+	{
+		background:#312783;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.product_cat-art-design #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/art-design.jpg?id=2253')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -245px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-art-design #top-banner>.container>div h1
+	{
+		background:#951b81;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.product_cat-biotechnology-life-sciences #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/07/bio-top-banner.jpg')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -50px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-biotechnology-life-sciences #top-banner>.container>div h1
+	{
+		background:#00a97a;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.product_cat-business #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/05/business-banner.jpg?id=3246')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-business #top-banner>.container>div h1
+	{
+		background:#e30613;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	
+	.single.postid-89 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-accounting.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-95 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-adtp.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-157 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-af.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-92 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-ba.jpg')!important;
+		background-position:top -350px center!important;
+	}
+	.single.postid-134 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-ba-af.jpg')!important;
+		background-position:top -250px center!important;
+	}
+	.single.postid-149 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-ba-event-mgmt.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-93 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-ba-finance.jpg')!important;
+		background-position:top -300px center!important;
+	}
+	.single.postid-94 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-ba-marketing.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-4267 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-banking.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-118 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-acc.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-144 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-ba.jpg')!important;
+		background-position:top -250px center!important;
+	}
+	.single.postid-119 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-finance.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-120 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-hrm.jpg')!important;
+		background-position:top -360px center!important;
+	}
+	.single.postid-143 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-ib.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-121 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-mkt.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-158 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-psychology.jpg')!important;
+		background-position:top -250px center!important;
+	}
+	.single.postid-83 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-cbs.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-152 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dia.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-86 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dib.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-3239 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-die.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-132 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dif.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-133 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dim.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-114 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-financial-planning.jpg')!important;
+		background-position:top -200px center!important;
+	}
+	.single.postid-123 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-snhu-ba.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-123 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-tafe.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-113 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-uow-accountancy.jpg')!important;
+		background-position:top -200px center!important;
+	}
+	.single.postid-2100 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-uow-finance.jpg')!important;
+		background-position:top -150px center!important;
+	}
+	.single.postid-2101 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-uow-ib.jpg')!important;
+		background-position:top -50px center!important;
+	}
+	.single.postid-2102 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-uow-mgmt.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-2104 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-uow-mkt.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	
+	.single.product_cat-computing-it #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Computing-IT.jpg?id=2254')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-computing-it #top-banner>.container>div h1
+	{
+		background:#eea100;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.product_cat-engineering #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Engineering.jpg?id=2255')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-engineering #top-banner>.container>div h1
+	{
+		background:#7e65aa;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.product_cat-health-sciences #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Health-Sciences.jpg?id=2256')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-health-sciences #top-banner>.container>div h1
+	{
+		background:#282828;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	
+	.single.postid-108 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-physio.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	
+	.single.product_cat-hospitality #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Hospitality-Culinary-Arts.jpg?id=2258')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-hospitality #top-banner>.container>div h1
+	{
+		background:#e74011;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	
+	.single.postid-123 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-cho.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-151 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bmihms.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-122 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dica.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-124 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dihm-wb.jpg')!important;
+		background-position:top -200px center!important;
+	}
+	.single.postid-103 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dihm.jpg')!important;
+		background-position:top -300px center!important;
+	}
+	
+	.single.product_cat-inti-programmes-for-working-professionals #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/WA-vertical.jpg?id=2715')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4074 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-ba-ls.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-3354 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-hrm-ls.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-3357 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-ib-ls.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-164 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bbus-mkt-ls.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-2114 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-cumba-gb.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-2115 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-cumba-gfs.jpg')!important;
+		background-position:top -200px center!important;
+	}
+	.single.postid-2116 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-cumba-im.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-155 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dbm-fl.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-116 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-mba-iu.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-2105 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-mba-ls.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-4148 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-mis.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-4150 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-mit.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-129 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-phd-ap.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-130 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-phd-is.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.postid-131 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-phd-mgmt.jpg')!important;
+		background-position:top -80px center!important;
+	}
+	.single.product_cat-inti-programmes-for-working-professionals #top-banner>.container>div h1
+	{
+		background:#282828;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	.single.product_cat-intensive-english-programmes #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/03/iep-banner.jpg?id=2920')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-intensive-english-programmes #top-banner>.container>div h1
+	{
+		background:#282828;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	
+	
+	.single.postid-109 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-eip.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-88 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-iep.jpg')!important;
+		background-position:top -250px center!important;
+	}
+	
+	.single.product_cat-law #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/law.jpg?id=2259')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-law #top-banner>.container>div h1
+	{
+		background:#82275c;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	
+	.single.postid-104 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-law.jpg')!important;
+		background-position:top center!important;
+	}
+	
+	.single.product_cat-mass-communication #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Mass-Communication.jpg?id=2261')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.product_cat-mass-communication #top-banner>.container>div h1
+	{
+		background:#7c234b;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	.single.postid-106 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-dimc.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-159 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-snhu-mc.jpg')!important;
+		background-position:top -100px center!important;
+	}
+	.single.postid-107 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bmcuh.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-147 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-bmc30-1.jpg')!important;
+		background-position:top center!important;
+	}
+	
+	.single.product_cat-pre-university-programmes #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/01/business.jpg?id=1949')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-96 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/cal.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-82 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/fbit.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-100 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/fia.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-4077 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/fib.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-136 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/fid.jpg')!important;
+		background-position:top center!important;
+	}
+	
+	.single.postid-97 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/nswhsc.jpg')!important;
+		background-position:top center!important;
+	}
+	.single.postid-99 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/08/sace.jpg')!important;
+		background-position:top center!important;
+	}
+	
+	.single.product_cat-pre-university-programmes #top-banner>.container>div h1
+	{
+		background:#3aaa35;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	
+	
+	.single.postid-56 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Health-Sciences.jpg?id=2256')!important;
+	}
+	
+	.single.postid-4299 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/05/business-banner.jpg?id=3246')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4531 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/aat-students.jpg')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4299 #top-banner>.container>div h1
+	{
+		background:#e30613;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.postid-4303 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/American-University-Program-Students.jpg?id=2699')!important;
+		background-repeat:no-repeat!important;
+		background-position:center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4303 #top-banner>.container>div h1
+	{
+		background:#312783;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.postid-4305 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Computing-IT.jpg?id=2254')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4305 #top-banner>.container>div h1
+	{
+		background:#eea100;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.postid-4304 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Hospitality-Culinary-Arts.jpg?id=2258')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4304 #top-banner>.container>div h1
+	{
+		background:#e74011;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:170px;
+	}
+	.single.postid-4300 #top-banner>.container>div
+	{
+		background-color: transparent!important;
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2018/02/Health-Sciences.jpg?id=2256')!important;
+		background-repeat:no-repeat!important;
+		background-position:top -100px center!important;
+		background-size:cover!important;
+	}
+	.single.postid-4300 #top-banner>.container>div h1
+	{
+		background:#3aaa35;
+		text-shadow:none;
+		padding:5px;
+		font-size:36px;
+		margin-top:300px;
+	}
+	
+	
+	.single.postid-1919 #top-banner>.container>div
+	{
+		background-image:url('https://newinti.edu.my/wp-content/uploads/2019/10/prog-snhu-psychology.jpg')!important;
+		background-position:top -100px center!important;
+	}
+
+	.single #single-programme-header .btn.general-btn, .single #single-programme-header .single-product-excerpt
+	{
+		display:none;
+	}
+
+
+/******************************************************************************************
+END Backgrounds
+*******************************************************************************************/
+
+/*******************************************************************************************
+TK Classes
+*******************************************************************************************/
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+/*******************************************************************************************
+End TK Classes
+*******************************************************************************************/
+
+.woocommerce-page #programme-intro div.product div.summary.entry-summary{
+	width: 100%;
+}

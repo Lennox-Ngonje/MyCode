@@ -1,0 +1,612 @@
+jQuery(document).ready(function($) {
+
+    var studyresults, cartresults, campusresults, totalresults = 0;
+    var degreeChecklist = [];
+    var campusChecklist = [];
+    var categoryChecklist = [];
+    var category, level, campus, degree;
+    var categoryPlural, certPlural, campusPlural;
+    var categoryLabel, certificationLabel, campusLabel, catId, certId;
+    var inactivityTimer1 = 0;
+    var inactivityTimer2 = 0;
+    var inactivityTimer3 = 0;
+    var JSONcategories,JSONcategories,JSONcategories;
+
+    setCheckboxes();
+    fillArrays();
+    showResults();
+    placeResults();
+    checkDegreeList();
+    checkCampusList();
+    addActiveClass();
+	makeMenuResponsive();
+
+    window.addEventListener('orientationchange',makeMenuResponsive);
+
+    function addActiveClass() {
+
+        $('.no-checkbox-layout').each(function(){
+
+            var aos = $(this).attr('id');
+
+            if (window.location.href.indexOf(aos) > -1) {
+
+                $('#'+aos).addClass('active-link');
+            }
+
+        })
+
+    }
+
+    function setCheckboxes() {
+
+        if (typeof codeArray !== 'undefined') {
+
+            if (!jQuery.isEmptyObject(codeArray)) {
+
+                if(!jQuery.isEmptyObject(codeArray.categories)) {
+
+                    JSONcategories = codeArray.categories.split(',');
+
+                    $('.checkbox-study').each(function () {
+                        $(this).prop('checked', ($.inArray($(this).val(), JSONcategories) != -1));
+                    });
+
+                    //console.log(JSONcategories[0]);
+
+                }
+                if(!jQuery.isEmptyObject(codeArray.certifications)) {
+
+                    JSONcertifications = codeArray.certifications.split(',');
+
+                    $('.checkbox-cert').each(function () {
+                        $(this).prop('checked', ($.inArray($(this).val(), JSONcertifications) != -1));
+                    });
+                }
+                if(!jQuery.isEmptyObject(codeArray.campus)) {
+
+                    JSONcampus = codeArray.campus.split(',');
+
+                    $('.checkbox-campus').each(function () {
+                        $(this).prop('checked', ($.inArray($(this).val(), JSONcampus) != -1));
+                    });
+                }
+            }
+        }
+
+    }
+
+    $('body').on('click',function(e){
+        if(!$(e.target).closest('#category-box,#category').length > 0 ) {
+            if ($('#category-box').is(':visible')) {
+                $('#category-box').hide();
+            }
+        }
+        if(!$(e.target).closest('#certificate-box,#certification').length > 0 ) {
+            if ($('#certificate-box').is(':visible')) {
+                $('#certificate-box').hide();
+            }
+        }
+        if(!$(e.target).closest('#campus-box,#campus').length > 0 ) {
+            if ($('#campus-box').is(':visible')) {
+                $('#campus-box').hide();
+            }
+        }
+    });
+
+    $('#category').on('click', function() {
+        if ($('#category-box').is(':visible')) {
+            $('#category-box').hide();
+        } else {
+            $('#category-box').show();
+
+            setInterval(function(){
+                inactivityTimer1++;
+
+                $('#category-box').on('mousemove',function(){
+                    inactivityTimer1 = 0;
+                });
+
+                if (inactivityTimer1 == 60) {
+                    $('#category-box').hide();
+                }
+
+            }, 1000)
+
+        }
+    });
+
+    $('#certification').on('click', function() {
+        if ($('#certificate-box').is(':visible')) {
+            $('#certificate-box').hide();
+        } else {
+            $('#certificate-box').show();
+
+            setInterval(function(){
+                inactivityTimer2++;
+
+                $('#certificate-box').on('mousemove',function(){
+                    inactivityTimer2 = 0;
+                });
+
+                if (inactivityTimer2 == 60) {
+                    $('#certificate-box').hide();
+                }
+
+            }, 1000)
+        }
+    });
+
+    $('#campus').on('click', function() {
+        if ($('#campus-box').is(':visible')) {
+            $('#campus-box').hide();
+        } else {
+            $('#campus-box').show();
+
+            setInterval(function(){
+                inactivityTimer3++;
+
+                $('#campus-box').on('mousemove',function(){
+                    inactivityTimer3 = 0;
+                });
+
+                if (inactivityTimer3 == 60) {
+                    $('#campus-box').hide();
+                }
+
+            }, 1000)
+        }
+    });
+
+    $('.refreshbutton').on('click',function(){
+        $('#campus-box').hide();
+        $('#category-box').hide();
+        $('#certificate-box').hide();
+    });
+
+    $(document).on('click', '#totalresults', function() {
+        $('.checkbox-study').each(function() {
+            $(this).prop('checked',false);
+        });
+        $('.checkbox-cert').each(function() {
+            $(this).prop('checked',false);
+        });
+        $('.checkbox-campus').each(function() {
+            $(this).prop('checked',false);
+        });
+
+        fillArrays();
+        showResults();
+        placeResults();
+    });
+
+    $(document).on('click', '.categories-block', function() {
+
+        $(this).remove();
+        catId = $(this).attr('id');
+        replacedId = catId.replace('result-', 'product_cat-')
+
+        $('#' + replacedId).prop('checked', false);
+
+        fillArrays();
+        showResults();
+        placeResults();
+        scrollToTop();
+
+    });
+
+    $(document).on('click', '.certification-block', function() {
+
+        $(this).remove();
+        certId = $(this).attr('id');
+        replacedId = certId.replace('result-', 'check-')
+
+        $('#' + replacedId).prop('checked', false);
+
+        fillArrays();
+        showResults();
+        placeResults();
+        scrollToTop();
+
+    });
+
+    $(document).on('click', '.campus-block', function() {
+
+        $(this).remove();
+        campId = $(this).attr('id');
+        replacedId = campId.replace('result-', 'check-')
+
+        $('#' + replacedId).prop('checked', false);
+
+        fillArrays();
+        showResults();
+        placeResults();
+        scrollToTop();
+
+    });
+
+    function placeResults() {
+
+        totalresults = 0;
+        $('#category-results').empty();
+        $('#certification-results').empty();
+        $('#campus-results').empty();
+
+        categoryresults = $('.checkbox-study:checked').length;
+        certresults = $('.checkbox-cert:checked').length;
+        campusresults = $('.checkbox-campus:checked').length;
+
+        $('.checkbox-study').each(function() {
+
+            if ($(this).prop('checked')) {
+
+                categoryLabel = $(this).parent().find('label').text();
+                categoryId = $(this).parent().attr('id');
+
+                $('<div id= "result-' + categoryId + '" class="results categories-block"><img src="https://newinti.edu.my/wp-content/plugins/inti_custom_plugin/images/catagory.png">' + categoryLabel + '<i class="fa fa-times-circle" aria-hidden="true"></i><div/>').appendTo('#category-results').css('display', 'inline-block');
+            }
+        })
+
+        $('.checkbox-cert').each(function() {
+
+            if ($(this).prop('checked')) {
+
+                certificationLabel = $(this).parent().find('label').text();
+                certificationId = $(this).parent().attr('id');
+
+                $('<div id= "result-' + certificationId + '" class="results certification-block"><img src="https://newinti.edu.my/wp-content/plugins/inti_custom_plugin/images/level.png">' + certificationLabel + '<i class="fa fa-times-circle" aria-hidden="true"></i><div/>').appendTo('#certification-results').css('display', 'inline-block');
+            }
+        })
+
+        $('.checkbox-campus').each(function() {
+
+            if ($(this).prop('checked')) {
+
+                campusLabel = $(this).parent().find('label').text();
+                campusId = $(this).parent().attr('id');
+
+                $('<div id= "result-' + campusId + '" class="results campus-block"><img src="https://newinti.edu.my/wp-content/plugins/inti_custom_plugin/images/campus.png">' + campusLabel + '<i class="fa fa-times-circle" aria-hidden="true"></i><div/>').appendTo('#campus-results').css('display', 'inline-block');
+            }
+        })
+
+        $('.products li:visible').each(function() {
+            totalresults += 1;
+        });
+
+        $('#totalresults').css('display', 'inline-block').html('Programmes (' + totalresults + ')').append('<div class="appended"></div>');
+
+    };
+
+    function checkDegreeList() {
+
+        $('.certificate-list li').each(function() {
+            var degreeId = $(this).attr('id');
+            var checkDegree = false;
+
+            $('.products li').each(function() {
+                if ($(this).hasClass('certifications-' + degreeId)) {
+                    checkDegree = true;
+                }
+            });
+
+            if (checkDegree == false) {
+                $(this).hide();
+            }
+
+        });
+    };
+
+    function checkCampusList() {
+
+        $('.campus-list li').each(function() {
+            var campusId = $(this).attr('id');
+            var checkCampus = false;
+
+            $('.products li').each(function() {
+                if ($(this).hasClass('campus-' + campusId) && $(this).is(':visible')) {
+                    checkCampus = true;
+                }
+            });
+
+            if (checkCampus == false) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+
+        });
+    };
+
+    $('.category-list li').on('click', function() {
+        var passCatIdToCheckbox = $(this).attr('id');
+        var catCheckbox = $('#product_cat-' + passCatIdToCheckbox);
+
+        if (!catCheckbox.prop('checked')) {
+            catCheckbox.prop('checked', true);
+        } else {
+            catCheckbox.prop('checked', false);
+        }
+
+        showRefreshIcon();
+        makeMenuResponsive();
+        fillArrays();
+        showResults();
+        scrollToTop();
+
+    });
+
+    $('.certificate-list li').on('click', function() {
+        var passCertIdToCheckbox = $(this).attr('id');
+        var certCheckbox = $('#check-' + passCertIdToCheckbox);
+
+        if (!certCheckbox.prop('checked')) {
+            certCheckbox.prop('checked', true);
+        } else {
+            certCheckbox.prop('checked', false);
+        }
+
+        showRefreshIcon();
+        makeMenuResponsive();
+        fillArrays();
+        showResults();
+        scrollToTop()
+
+    });
+
+    $('.campus-list li').on('click', function() {
+
+        var passCampusIdToCheckbox = $(this).attr('id');
+        var campCheckbox = $('#check-' + passCampusIdToCheckbox);
+
+        if (!campCheckbox.prop('checked')) {
+            campCheckbox.prop('checked', true);
+        } else {
+            campCheckbox.prop('checked', false);
+        }
+
+        showRefreshIcon();
+        makeMenuResponsive();
+        fillArrays();
+        showResults();
+        scrollToTop()
+
+    });
+
+    function fillArrays() {
+
+        categoryChecklist = [];
+        campusChecklist = [];
+        degreeChecklist = [];
+
+        $('.category-list input[type="checkbox"]').each(function() {
+
+            if ($(this).prop('checked') == true) {
+                var getCatCheckboxId = $(this).attr('id');
+
+                categoryChecklist.push(getCatCheckboxId);
+            }
+        })
+
+        $('.certificate-list input[type="checkbox"]').each(function() {
+
+            if ($(this).prop('checked') == true) {
+                var getCertCheckboxId = $(this).attr('id');
+                var getCertCheckedIdArray = getCertCheckboxId.split('-');
+
+                degreeChecklist.push('certifications-' + getCertCheckedIdArray[1]);
+
+                //console.log(getCertCheckedIdArray[1]);
+            }
+        })
+
+        $('.campus-list input[type="checkbox"]').each(function() {
+
+            if ($(this).prop('checked') == true) {
+                var getCampusCheckboxId = $(this).attr('id');
+                var getCampusCheckedIdArray = getCampusCheckboxId.replace('check', 'campus')
+
+                campusChecklist.push(getCampusCheckedIdArray);
+
+                //console.log(campusChecklist);
+            }
+        })
+
+    }
+
+    function GetClassByPos(certClasses, position) {
+        var left = certClasses.substr(0, position);
+        var right = certClasses.substr(position);
+
+        left = left.replace(/^.+ /g, '');
+        right = right.replace(/ .+$/g, '');
+
+        return left + right;
+    }
+
+    function showResults() {
+
+        if (categoryChecklist.length < 1) {
+
+            if ((degreeChecklist.length < 1) && (campusChecklist.length < 1)) {
+
+                $('.products li').show();
+
+            }
+            if ((degreeChecklist.length > 0) && (campusChecklist.length < 1)) {
+
+                $('.products li').each(function() {
+
+                    var certClasses = this.className;
+                    var getCertClass = certClasses.indexOf('certifications-');
+                    var completeCertClass = GetClassByPos(certClasses, getCertClass);
+
+                    if ($.inArray(completeCertClass, degreeChecklist) > -1) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+
+            }
+            if ((degreeChecklist.length < 1) && (campusChecklist.length > 0)) {
+
+                $('.products li').hide();
+
+                $('.products li').each(function() {
+
+                    var thisShow = false;
+                    var certClasses = this.className;
+
+                    for (var i = 0; i < campusChecklist.length; i++) {
+                        if (certClasses.indexOf(campusChecklist[i]) >= 0) {
+                            thisShow = true;
+                        }
+                    }
+                    if (thisShow == true) {
+                        $(this).show();
+                    }
+
+                });
+
+            }
+            if ((degreeChecklist.length > 0) && (campusChecklist.length > 0)) {
+
+                $('.products li').hide();
+
+                $('.products li').each(function() {
+
+                    var thisShow = false;
+                    var certClasses = this.className;
+
+                    for (var i = 0; i < campusChecklist.length; i++) {
+                        if (certClasses.indexOf(campusChecklist[i]) >= 0) {
+                            thisShow = true;
+                        }
+                    }
+                    if (thisShow == true) {
+                        $(this).show();
+
+                    }
+
+                });
+
+                $('.products li:visible').each(function(){
+                    var certClasses = this.className;
+                    var getCertClass = certClasses.indexOf('certifications-');
+                    var completeCertClass = GetClassByPos(certClasses, getCertClass);
+
+                    if ($.inArray(completeCertClass, degreeChecklist) > -1) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                })
+
+            }
+        } else {
+            $('.products li').hide();
+
+            $('.products li').each(function() {
+
+                var thisShow = false;
+                var catClasses = this.className;
+
+                for (var i = 0; i < categoryChecklist.length; i++) {
+                    if (catClasses.indexOf(categoryChecklist[i]) >= 0) {
+                        thisShow = true;
+                    }
+                }
+                if (thisShow == true) {
+                    $(this).show();
+                }
+                if (degreeChecklist.length > 0) {
+                    $('.products li:visible').each(function() {
+
+                        thisShow = false;
+                        var degreeClasses = this.className;
+
+                        for (var i = 0; i < degreeChecklist.length; i++) {
+                            if (degreeClasses.indexOf(degreeChecklist[i]) >= 0) {
+                                thisShow = true;
+                            }
+                        }
+                        if (thisShow == true) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+                if (campusChecklist.length > 0) {
+                    $('.products li:visible').each(function() {
+
+                        thisShow = false;
+                        var campusClasses = this.className;
+
+                        for (var i = 0; i < campusChecklist.length; i++) {
+                            if (campusClasses.indexOf(campusChecklist[i]) >= 0) {
+                                thisShow = true;
+                            }
+                        }
+                        if (thisShow == true) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+        }
+
+        placeResults();
+
+        if ($('.products li:visible').size() < 1) {
+            $('#no-results').css('width','100%').html('<h4 style="text-align:center;margin: 50px 0px; padding: 0px 0px;">Seems we have no programmes matching your selection. Adjust the filters above for better results.</h4>');
+        } else {
+            $('#no-results').empty();
+        }
+        if ($('.products li:hidden').size() < 1) {
+            //$('#total-results-close').hide();
+        }
+
+    }
+
+
+
+    function makeMenuResponsive() {
+        var isMobile = window.matchMedia("only screen and (max-width: 420px)");
+        //var isLandscape = window.matchMedia("(orientation: landscape)");
+
+        //if (isLandscape.matches) {
+
+        //}
+
+        if (isMobile.matches) {
+            $('.mobile-hide').css('display','none');
+            $('.programme-filter-li').css({'width':'25%','margin':'0 !important'});
+            $('.programme-filter button').css({'background-size':'30%','background-position':'25% 50%'});
+        }
+        if (Math.abs(window.orientation) === 90) {
+            //console.log('ls');
+            $('.mobile-hide').css('display','none');
+            $('.jump-label').css('display','none');
+            $('.programme-filter-li').css({'width':'15%','margin':'0 !important'});
+            $('.programme-filter button').css({'width':'80px','background-size':'32%','background-position':'25% 50%','border-radius':'50px'});
+        }
+    }
+
+    function showRefreshIcon() {
+        $('.refresh-icon').stop().clearQueue().fadeIn(0).delay(500).fadeOut(250);
+    }
+
+    function scrollToTop() {
+        $('html, body').animate({
+            scrollTop: $('.products').offset().top -275
+        }, 1000)
+    }
+
+    $('.close-icon').on('click', function(){
+        $(this).parents('div').eq(1).hide();
+    });
+
+});
